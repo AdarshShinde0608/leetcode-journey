@@ -3,7 +3,7 @@
 
 # 🧠 LeetCode Journey
 
-*Automated progress tracker powered by [CodeStreak](https://github.com/your-username/CodeStreak)*
+*Automated progress tracker powered by [CodeStreak](https://github.com/AdarshShinde0608/CodeStreak)*
 
 ---
 
