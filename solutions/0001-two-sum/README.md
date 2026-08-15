@@ -6,7 +6,7 @@
 | **Difficulty** | Easy |
 | **Language** | java |
 | **Topics** | Array, Hash Table |
-| **Date Solved** | 2026-08-14 |
+| **Date Solved** | 2026-08-15 |
 | **LeetCode** | [Link](https://leetcode.com/problems/two-sum/) |
 
 ## Approach
