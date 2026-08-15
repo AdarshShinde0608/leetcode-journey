@@ -1,1 +1,138 @@
-﻿[]
+[
+  {
+    "submission_id": "2106947817",
+    "problem": {
+      "id": 1,
+      "title": "Two Sum",
+      "slug": "two-sum",
+      "difficulty": "Easy",
+      "topics": [
+        "Array",
+        "Hash Table"
+      ],
+      "url": "https://leetcode.com/problems/two-sum/"
+    },
+    "language": "java",
+    "status": "Accepted",
+    "submitted_at": "2026-08-14T18:23:19Z",
+    "runtime": "2 ms",
+    "memory": "47.1 MB",
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": "import java.util.HashMap;\n\nclass Solution {\n    public int[] twoSum(int[] nums, int target) {\n        HashMap<Integer, Integer> map = new HashMap<>();\n        \n        for (int i = 0; i < nums.length; i++) {\n            int complement = target - nums[i];\n            if (map.containsKey(complement)) {\n                return new int[] { map.get(complement), i };\n            }\n            map.put(nums[i], i);\n        }\n        \n        // The problem guarantees a solution, so this line is never reached\n        return new int[] {};\n    }\n}"
+  },
+  {
+    "submission_id": "2106947099",
+    "problem": {
+      "id": 1,
+      "title": "Two Sum",
+      "slug": "two-sum",
+      "difficulty": "Easy",
+      "topics": [
+        "Array",
+        "Hash Table"
+      ],
+      "url": "https://leetcode.com/problems/two-sum/"
+    },
+    "language": "java",
+    "status": "Accepted",
+    "submitted_at": "2026-08-14T18:22:39Z",
+    "runtime": "2 ms",
+    "memory": "47.1 MB",
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": "import java.util.HashMap;\n\nclass Solution {\n    public int[] twoSum(int[] nums, int target) {\n        HashMap<Integer, Integer> map = new HashMap<>();\n        \n        for (int i = 0; i < nums.length; i++) {\n            int complement = target - nums[i];\n            if (map.containsKey(complement)) {\n                return new int[] { map.get(complement), i };\n            }\n            map.put(nums[i], i);\n        }\n        \n        // The problem guarantees a solution, so this line is never reached\n        return new int[] {};\n    }\n}"
+  },
+  {
+    "submission_id": "2098722999",
+    "problem": {
+      "id": 2095,
+      "title": "Delete the Middle Node of a Linked List",
+      "slug": "delete-the-middle-node-of-a-linked-list",
+      "difficulty": "Medium",
+      "topics": [
+        "Linked List",
+        "Two Pointers"
+      ],
+      "url": "https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/"
+    },
+    "language": "java",
+    "status": "Accepted",
+    "submitted_at": "2026-08-08T06:15:58Z",
+    "runtime": "3 ms",
+    "memory": "202.7 MB",
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode deleteMiddle(ListNode head) {\n        if (head.next == null) return null;\n        if (head.next.next == null) {\n            head.next=null;\n            return head;\n        }\n\n        ListNode s=head;\n        ListNode f=s;\n        ListNode pre=s;\n\n\n        while (f.next!=null && f.next.next!=null) {\n            pre = s;\n            s = s.next;\n            f = f.next.next;\n        }\n\n        if (f.next == null){\n            delete(pre, s);\n            return head;\n        }\n        delete(pre.next, s.next);\n        return head;\n    }\n\n    public void delete(ListNode previous, ListNode node) {\n        node = node.next;\n        previous.next = node;\n    }\n}\n"
+  },
+  {
+    "submission_id": "2098688815",
+    "problem": {
+      "id": 876,
+      "title": "Middle of the Linked List",
+      "slug": "middle-of-the-linked-list",
+      "difficulty": "Easy",
+      "topics": [
+        "Linked List",
+        "Two Pointers"
+      ],
+      "url": "https://leetcode.com/problems/middle-of-the-linked-list/"
+    },
+    "language": "java",
+    "status": "Accepted",
+    "submitted_at": "2026-08-08T05:45:12Z",
+    "runtime": "0 ms",
+    "memory": "42.9 MB",
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode middleNode(ListNode head) {\n        ListNode s;\n        ListNode f;\n        s = head; f = s;\n\n        while (f.next!=null && f.next.next!=null) {\n            s = s.next;\n            f = f.next.next;\n        }\n\n        if (f.next == null){\n            return s;\n        }\n        return s.next;\n    }\n}"
+  },
+  {
+    "submission_id": "2094697333",
+    "problem": {
+      "id": 202,
+      "title": "Happy Number",
+      "slug": "happy-number",
+      "difficulty": "Easy",
+      "topics": [
+        "Hash Table",
+        "Math",
+        "Two Pointers",
+        "Floyd's Cycle Finding Algorithm"
+      ],
+      "url": "https://leetcode.com/problems/happy-number/"
+    },
+    "language": "java",
+    "status": "Accepted",
+    "submitted_at": "2026-08-05T02:12:39Z",
+    "runtime": "1 ms",
+    "memory": "41.7 MB",
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": "class Solution { \n    public static int sum(int n) {\n        int sum=0;\n        while (n>0) {\n            int d=n%10;\n            n=n/10;\n            sum += (d*d);\n        }\n        return sum;\n    } \n\n    public boolean isHappy(int n) {\n        int slow = n;\n        int fast = n;\n\n        while (fast!=1) {\n            slow = sum(slow);\n            fast = sum(fast);\n            fast = sum(fast);\n            if (slow==fast && slow!=1) {\n                return false;\n            }\n        }\n        return true;\n    }\n}"
+  },
+  {
+    "submission_id": "2092702155",
+    "problem": {
+      "id": 141,
+      "title": "Linked List Cycle",
+      "slug": "linked-list-cycle",
+      "difficulty": "Easy",
+      "topics": [
+        "Hash Table",
+        "Linked List",
+        "Two Pointers",
+        "Floyd's Cycle Finding Algorithm"
+      ],
+      "url": "https://leetcode.com/problems/linked-list-cycle/"
+    },
+    "language": "java",
+    "status": "Accepted",
+    "submitted_at": "2026-08-03T14:03:02Z",
+    "runtime": "0 ms",
+    "memory": "46.9 MB",
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": "/**\n * Definition for singly-linked list.\n * class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode(int x) {\n *         val = x;\n *         next = null;\n *     }\n * }\n */\npublic class Solution {\n    public boolean hasCycle(ListNode head) {\n        ListNode s;\n        ListNode f;\n\n        if (head == null || head.next == null) return false; \n        \n        s = head; f = s;\n\n        while (f.next != null && f.next.next != null) {\n            s = s.next; f = f.next.next;\n\n            if (s == f) return true;\n        }\n        return false;\n    }\n}"
+  }
+]
