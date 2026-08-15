@@ -1,6 +1,6 @@
 [
   {
-    "submission_id": "2106947817",
+    "submission_id": "2107135658",
     "problem": {
       "id": 1,
       "title": "Two Sum",
@@ -14,29 +14,7 @@
     },
     "language": "java",
     "status": "Accepted",
-    "submitted_at": "2026-08-14T18:23:19Z",
-    "runtime": "2 ms",
-    "memory": "47.1 MB",
-    "runtime_percentile": null,
-    "memory_percentile": null,
-    "code": "import java.util.HashMap;\n\nclass Solution {\n    public int[] twoSum(int[] nums, int target) {\n        HashMap<Integer, Integer> map = new HashMap<>();\n        \n        for (int i = 0; i < nums.length; i++) {\n            int complement = target - nums[i];\n            if (map.containsKey(complement)) {\n                return new int[] { map.get(complement), i };\n            }\n            map.put(nums[i], i);\n        }\n        \n        // The problem guarantees a solution, so this line is never reached\n        return new int[] {};\n    }\n}"
-  },
-  {
-    "submission_id": "2106947099",
-    "problem": {
-      "id": 1,
-      "title": "Two Sum",
-      "slug": "two-sum",
-      "difficulty": "Easy",
-      "topics": [
-        "Array",
-        "Hash Table"
-      ],
-      "url": "https://leetcode.com/problems/two-sum/"
-    },
-    "language": "java",
-    "status": "Accepted",
-    "submitted_at": "2026-08-14T18:22:39Z",
+    "submitted_at": "2026-08-15T01:46:46Z",
     "runtime": "2 ms",
     "memory": "47.1 MB",
     "runtime_percentile": null,
@@ -66,6 +44,28 @@
     "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode deleteMiddle(ListNode head) {\n        if (head.next == null) return null;\n        if (head.next.next == null) {\n            head.next=null;\n            return head;\n        }\n\n        ListNode s=head;\n        ListNode f=s;\n        ListNode pre=s;\n\n\n        while (f.next!=null && f.next.next!=null) {\n            pre = s;\n            s = s.next;\n            f = f.next.next;\n        }\n\n        if (f.next == null){\n            delete(pre, s);\n            return head;\n        }\n        delete(pre.next, s.next);\n        return head;\n    }\n\n    public void delete(ListNode previous, ListNode node) {\n        node = node.next;\n        previous.next = node;\n    }\n}\n"
   },
   {
+    "submission_id": "2098710097",
+    "problem": {
+      "id": 2095,
+      "title": "Delete the Middle Node of a Linked List",
+      "slug": "delete-the-middle-node-of-a-linked-list",
+      "difficulty": "Medium",
+      "topics": [
+        "Linked List",
+        "Two Pointers"
+      ],
+      "url": "https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/"
+    },
+    "language": "java",
+    "status": "Accepted",
+    "submitted_at": "2026-08-08T06:04:46Z",
+    "runtime": "5 ms",
+    "memory": "202.5 MB",
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode deleteMiddle(ListNode head) {\n        if (head.next == null) return null;\n\n        ListNode s=head;\n        ListNode f=s;\n\n        while (f.next!=null && f.next.next!=null) {\n            s = s.next;\n            f = f.next.next;\n        }\n\n        if (f.next == null){\n            delete(s, head);\n            return head;\n        }\n        delete(s.next, head);\n        return head;\n    }\n\n    public void delete(ListNode node, ListNode head) {\n        ListNode t=head;\n\n        while (t.next!=node) {\n            t = t.next;\n        }\n        node = node.next;\n        t.next = node;\n    }\n}\n"
+  },
+  {
     "submission_id": "2098688815",
     "problem": {
       "id": 876,
@@ -86,6 +86,32 @@
     "runtime_percentile": null,
     "memory_percentile": null,
     "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode middleNode(ListNode head) {\n        ListNode s;\n        ListNode f;\n        s = head; f = s;\n\n        while (f.next!=null && f.next.next!=null) {\n            s = s.next;\n            f = f.next.next;\n        }\n\n        if (f.next == null){\n            return s;\n        }\n        return s.next;\n    }\n}"
+  },
+  {
+    "submission_id": "2096018165",
+    "problem": {
+      "id": 287,
+      "title": "Find the Duplicate Number",
+      "slug": "find-the-duplicate-number",
+      "difficulty": "Medium",
+      "topics": [
+        "Array",
+        "Two Pointers",
+        "Binary Search",
+        "Bit Manipulation",
+        "Pigeonhole Principle",
+        "Floyd's Cycle Finding Algorithm"
+      ],
+      "url": "https://leetcode.com/problems/find-the-duplicate-number/"
+    },
+    "language": "java",
+    "status": "Accepted",
+    "submitted_at": "2026-08-06T02:37:54Z",
+    "runtime": "4 ms",
+    "memory": "82.6 MB",
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": "class Solution {\n    public int findDuplicate(int[] nums) {\n        int s=0, f=0;\n        while (true) {\n            s = nums[s];\n            f = nums[f]; f = nums[f];\n            if (s==f) {\n                s=0;\n                while (s!=f) {\n                    s=nums[s];\n                    f=nums[f];\n                }\n                return s;\n            }\n        }\n    }\n}"
   },
   {
     "submission_id": "2094697333",
@@ -112,6 +138,54 @@
     "code": "class Solution { \n    public static int sum(int n) {\n        int sum=0;\n        while (n>0) {\n            int d=n%10;\n            n=n/10;\n            sum += (d*d);\n        }\n        return sum;\n    } \n\n    public boolean isHappy(int n) {\n        int slow = n;\n        int fast = n;\n\n        while (fast!=1) {\n            slow = sum(slow);\n            fast = sum(fast);\n            fast = sum(fast);\n            if (slow==fast && slow!=1) {\n                return false;\n            }\n        }\n        return true;\n    }\n}"
   },
   {
+    "submission_id": "2094393580",
+    "problem": {
+      "id": 142,
+      "title": "Linked List Cycle II",
+      "slug": "linked-list-cycle-ii",
+      "difficulty": "Medium",
+      "topics": [
+        "Hash Table",
+        "Linked List",
+        "Two Pointers",
+        "Floyd's Cycle Finding Algorithm"
+      ],
+      "url": "https://leetcode.com/problems/linked-list-cycle-ii/"
+    },
+    "language": "java",
+    "status": "Accepted",
+    "submitted_at": "2026-08-04T17:36:42Z",
+    "runtime": "1 ms",
+    "memory": "46.6 MB",
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": "/**\n * Definition for singly-linked list.\n * class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode(int x) {\n *         val = x;\n *         next = null;\n *     }\n * }\n */\npublic class Solution {\n    public ListNode detectCycle(ListNode head) {\n        ListNode s=head;\n        ListNode f;\n        f = s;\n\n        if (f==null || f.next==null || f.next.next==null) return null;\n\n        s = s.next;\n        f = f.next.next;\n        while (f.next!=null && f.next.next!=null) {\n            if (s == f) {\n                s = head;\n                while (s != f) {\n                    f=f.next;\n                    s=s.next;\n                }\n                return s;\n            }\n            f=f.next.next;\n            s=s.next;\n        }\n        return null;\n    }\n}"
+  },
+  {
+    "submission_id": "2094393009",
+    "problem": {
+      "id": 142,
+      "title": "Linked List Cycle II",
+      "slug": "linked-list-cycle-ii",
+      "difficulty": "Medium",
+      "topics": [
+        "Hash Table",
+        "Linked List",
+        "Two Pointers",
+        "Floyd's Cycle Finding Algorithm"
+      ],
+      "url": "https://leetcode.com/problems/linked-list-cycle-ii/"
+    },
+    "language": "java",
+    "status": "Accepted",
+    "submitted_at": "2026-08-04T17:36:20Z",
+    "runtime": "1 ms",
+    "memory": "46.5 MB",
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": "/**\n * Definition for singly-linked list.\n * class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode(int x) {\n *         val = x;\n *         next = null;\n *     }\n * }\n */\npublic class Solution {\n    public ListNode detectCycle(ListNode head) {\n        ListNode s=head;\n        ListNode f;\n        f = s;\n\n        if (f==null || f.next==null || f.next.next==null) return null;\n\n        s = s.next;\n        f = f.next.next;\n        while (f.next!=null && f.next.next!=null) {\n            if (s == f) {\n                s = head;\n                while (s != f) {\n                    f=f.next;\n                    s=s.next;\n                }\n                return s;\n            }\n            f=f.next.next;\n            s=s.next;\n        }\n        return null;\n    }\n}"
+  },
+  {
     "submission_id": "2092702155",
     "problem": {
       "id": 141,
@@ -134,5 +208,49 @@
     "runtime_percentile": null,
     "memory_percentile": null,
     "code": "/**\n * Definition for singly-linked list.\n * class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode(int x) {\n *         val = x;\n *         next = null;\n *     }\n * }\n */\npublic class Solution {\n    public boolean hasCycle(ListNode head) {\n        ListNode s;\n        ListNode f;\n\n        if (head == null || head.next == null) return false; \n        \n        s = head; f = s;\n\n        while (f.next != null && f.next.next != null) {\n            s = s.next; f = f.next.next;\n\n            if (s == f) return true;\n        }\n        return false;\n    }\n}"
+  },
+  {
+    "submission_id": "2092583646",
+    "problem": {
+      "id": 83,
+      "title": "Remove Duplicates from Sorted List",
+      "slug": "remove-duplicates-from-sorted-list",
+      "difficulty": "Easy",
+      "topics": [
+        "Linked List"
+      ],
+      "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-list/"
+    },
+    "language": "java",
+    "status": "Accepted",
+    "submitted_at": "2026-08-03T12:22:32Z",
+    "runtime": "0 ms",
+    "memory": "45.5 MB",
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode deleteDuplicates(ListNode head) {\n        if (head == null || head.next == null) return head;\n        \n        ListNode cur=head;\n        ListNode t = cur.next;\n\n        while (cur.next != null) {\n            if (cur.val == t.val) {\n                while (cur.val == t.val) {\n                    t = t.next;\n                    if (t == null) {\n                        cur.next = null;\n                        return head;\n                    }\n                }\n                cur.next = t;\n            }\n            t = t.next;\n            cur = cur.next;\n        }\n        return head;\n    }\n}"
+  },
+  {
+    "submission_id": "1995137280",
+    "problem": {
+      "id": 977,
+      "title": "Squares of a Sorted Array",
+      "slug": "squares-of-a-sorted-array",
+      "difficulty": "Easy",
+      "topics": [
+        "Array",
+        "Two Pointers",
+        "Sorting"
+      ],
+      "url": "https://leetcode.com/problems/squares-of-a-sorted-array/"
+    },
+    "language": "cpp",
+    "status": "Accepted",
+    "submitted_at": "2026-05-04T17:02:47Z",
+    "runtime": "872 ms",
+    "memory": "30.2 MB",
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": "class Solution {\npublic:\n    vector<int> sortedSquares(vector<int>& nums) {\n        for(int i=0; i<nums.size(); i++){\n            nums[i] *= nums[i];\n        }\n\n        for(int j=nums.size()-1; j>0; j--){\n            for(int i=0; i<j; i++){\n                if(nums[i]>nums[i+1]){\n                    swap(nums[i], nums[i+1]);\n                }\n            }\n        }\n        return nums;\n    }\n};"
   }
 ]
