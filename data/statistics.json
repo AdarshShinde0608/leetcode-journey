@@ -1,1 +1,43 @@
-﻿{"totalSolved":0,"easy":0,"medium":0,"hard":0,"byLanguage":{},"byTopic":{},"perDay":{},"perWeek":{},"perMonth":{},"perYear":{},"firstSolved":null,"latestSolved":null}
+{
+  "totalSolved": 10,
+  "easy": 6,
+  "medium": 4,
+  "hard": 0,
+  "byLanguage": {
+    "java": 9,
+    "cpp": 1
+  },
+  "byTopic": {
+    "Two Pointers": 7,
+    "Linked List": 6,
+    "Hash Table": 4,
+    "Floyd's Cycle Finding Algorithm": 4,
+    "Array": 3,
+    "Math": 2,
+    "Sorting": 1,
+    "Binary Search": 1,
+    "Bit Manipulation": 1,
+    "Pigeonhole Principle": 1,
+    "Recursion": 1
+  },
+  "perDay": {
+    "2026-05-04": 1,
+    "2026-08-03": 2,
+    "2026-08-04": 1,
+    "2026-08-05": 1,
+    "2026-08-06": 1,
+    "2026-08-08": 2,
+    "2026-08-14": 1,
+    "2026-08-15": 1
+  },
+  "perMonth": {
+    "2026-05": 1,
+    "2026-08": 9
+  },
+  "perYear": {
+    "2026": 10
+  },
+  "firstSolved": "2026-05-04",
+  "latestSolved": "2026-08-15",
+  "generatedAt": "2026-08-15T07:18:24.234Z"
+}
