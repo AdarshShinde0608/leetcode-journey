@@ -364,5 +364,74 @@
     "runtime_percentile": null,
     "memory_percentile": null,
     "code": "class Solution { \n    public static int sum(int n) {\n        int sum=0;\n        while (n>0) {\n            int d=n%10;\n            n=n/10;\n            sum += (d*d);\n        }\n        return sum;\n    } \n\n    public boolean isHappy(int n) {\n        int slow = n;\n        int fast = n;\n\n        while (fast!=1) {\n            slow = sum(slow);\n            fast = sum(fast);\n            fast = sum(fast);\n            if (slow==fast && slow!=1) {\n                return false;\n            }\n        }\n        return true;\n    }\n}"
+  },
+  {
+    "submission_id": "2107358724",
+    "problem": {
+      "id": 2,
+      "title": "Add Two Numbers",
+      "slug": "add-two-numbers",
+      "difficulty": "Medium",
+      "topics": [
+        "Linked List",
+        "Math",
+        "Recursion"
+      ],
+      "url": "https://leetcode.com/problems/add-two-numbers/"
+    },
+    "language": "java",
+    "status": "Accepted",
+    "submitted_at": "2026-08-15T07:18:04Z",
+    "runtime": "1 ms",
+    "memory": "46.4 MB",
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {\n        ListNode dummy = new ListNode(0);\n        ListNode current = dummy;\n        int carry = 0;\n        \n        while (l1 != null || l2 != null || carry != 0) {\n            int val1 = (l1 != null) ? l1.val : 0;\n            int val2 = (l2 != null) ? l2.val : 0;\n            \n            int sum = val1 + val2 + carry;\n            carry = sum / 10;\n            int digit = sum % 10;\n            \n            current.next = new ListNode(digit);\n            current = current.next;\n            \n            if (l1 != null) l1 = l1.next;\n            if (l2 != null) l2 = l2.next;\n        }\n        \n        return dummy.next;\n    }\n}"
+  },
+  {
+    "submission_id": "2107358169",
+    "problem": {
+      "id": 2,
+      "title": "Add Two Numbers",
+      "slug": "add-two-numbers",
+      "difficulty": "Medium",
+      "topics": [
+        "Linked List",
+        "Math",
+        "Recursion"
+      ],
+      "url": "https://leetcode.com/problems/add-two-numbers/"
+    },
+    "language": "java",
+    "status": "Accepted",
+    "submitted_at": "2026-08-15T07:17:32Z",
+    "runtime": "1 ms",
+    "memory": "46.6 MB",
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {\n        ListNode dummy = new ListNode(0);\n        ListNode current = dummy;\n        int carry = 0;\n        \n        while (l1 != null || l2 != null || carry != 0) {\n            int val1 = (l1 != null) ? l1.val : 0;\n            int val2 = (l2 != null) ? l2.val : 0;\n            \n            int sum = val1 + val2 + carry;\n            carry = sum / 10;\n            int digit = sum % 10;\n            \n            current.next = new ListNode(digit);\n            current = current.next;\n            \n            if (l1 != null) l1 = l1.next;\n            if (l2 != null) l2 = l2.next;\n        }\n        \n        return dummy.next;\n    }\n}"
+  },
+  {
+    "submission_id": "2107357085",
+    "problem": {
+      "id": 2,
+      "title": "Add Two Numbers",
+      "slug": "add-two-numbers",
+      "difficulty": "Medium",
+      "topics": [
+        "Linked List",
+        "Math",
+        "Recursion"
+      ],
+      "url": "https://leetcode.com/problems/add-two-numbers/"
+    },
+    "language": "java",
+    "status": "Accepted",
+    "submitted_at": "2026-08-15T07:16:24Z",
+    "runtime": "1 ms",
+    "memory": "46.3 MB",
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {\n        ListNode dummy = new ListNode(0);\n        ListNode current = dummy;\n        int carry = 0;\n        \n        while (l1 != null || l2 != null || carry != 0) {\n            int val1 = (l1 != null) ? l1.val : 0;\n            int val2 = (l2 != null) ? l2.val : 0;\n            \n            int sum = val1 + val2 + carry;\n            carry = sum / 10;\n            int digit = sum % 10;\n            \n            current.next = new ListNode(digit);\n            current = current.next;\n            \n            if (l1 != null) l1 = l1.next;\n            if (l2 != null) l2 = l2.next;\n        }\n        \n        return dummy.next;\n    }\n}"
   }
 ]
