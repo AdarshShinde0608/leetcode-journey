@@ -6,7 +6,7 @@
 | **Difficulty** | Easy |
 | **Language** | java |
 | **Topics** | Array, Hash Table |
-| **Date Solved** | 2026-08-15 |
+| **Date Solved** | 2026-08-14 |
 | **LeetCode** | [Link](https://leetcode.com/problems/two-sum/) |
 
 ## Approach
@@ -21,4 +21,4 @@
 ## Performance
 
 - **Runtime**: 2 ms
-- **Memory**: 47.2 MB
+- **Memory**: 47.1 MB
