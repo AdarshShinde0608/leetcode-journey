@@ -433,5 +433,29 @@
     "runtime_percentile": null,
     "memory_percentile": null,
     "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {\n        ListNode dummy = new ListNode(0);\n        ListNode current = dummy;\n        int carry = 0;\n        \n        while (l1 != null || l2 != null || carry != 0) {\n            int val1 = (l1 != null) ? l1.val : 0;\n            int val2 = (l2 != null) ? l2.val : 0;\n            \n            int sum = val1 + val2 + carry;\n            carry = sum / 10;\n            int digit = sum % 10;\n            \n            current.next = new ListNode(digit);\n            current = current.next;\n            \n            if (l1 != null) l1 = l1.next;\n            if (l2 != null) l2 = l2.next;\n        }\n        \n        return dummy.next;\n    }\n}"
+  },
+  {
+    "submission_id": "2111765110",
+    "problem": {
+      "id": 234,
+      "title": "Palindrome Linked List",
+      "slug": "palindrome-linked-list",
+      "difficulty": "Easy",
+      "topics": [
+        "Linked List",
+        "Two Pointers",
+        "Stack",
+        "Recursion"
+      ],
+      "url": "https://leetcode.com/problems/palindrome-linked-list/"
+    },
+    "language": "java",
+    "status": "Accepted",
+    "submitted_at": "2026-08-18T17:17:05Z",
+    "runtime": "8 ms",
+    "memory": "99.6 MB",
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": "class Solution {\n    public boolean isPalindrome(ListNode head) {\n        List<Integer> values = new ArrayList<>();\n        ListNode current = head;\n        \n        // Store all values in ArrayList\n        while (current != null) {\n            values.add(current.val);\n            current = current.next;\n        }\n        \n        // Check if palindrome\n        int left = 0;\n        int right = values.size() - 1;\n        while (left < right) {\n            if (values.get(left) != values.get(right)) {\n                return false;\n            }\n            left++;\n            right--;\n        }\n        return true;\n    }\n}"
   }
 ]
