@@ -457,5 +457,52 @@
     "runtime_percentile": null,
     "memory_percentile": null,
     "code": "class Solution {\n    public boolean isPalindrome(ListNode head) {\n        List<Integer> values = new ArrayList<>();\n        ListNode current = head;\n        \n        // Store all values in ArrayList\n        while (current != null) {\n            values.add(current.val);\n            current = current.next;\n        }\n        \n        // Check if palindrome\n        int left = 0;\n        int right = values.size() - 1;\n        while (left < right) {\n            if (values.get(left) != values.get(right)) {\n                return false;\n            }\n            left++;\n            right--;\n        }\n        return true;\n    }\n}"
+  },
+  {
+    "submission_id": "2113110285",
+    "problem": {
+      "id": 4,
+      "title": "Median of Two Sorted Arrays",
+      "slug": "median-of-two-sorted-arrays",
+      "difficulty": "Hard",
+      "topics": [
+        "Array",
+        "Binary Search",
+        "Divide and Conquer"
+      ],
+      "url": "https://leetcode.com/problems/median-of-two-sorted-arrays/"
+    },
+    "language": "java",
+    "status": "Accepted",
+    "submitted_at": "2026-08-19T18:22:05Z",
+    "runtime": "1 ms",
+    "memory": "49 MB",
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": "class Solution {\n    public double findMedianSortedArrays(int[] nums1, int[] nums2) {\n        // Ensure nums1 is the smaller array for optimization\n        if (nums1.length > nums2.length) {\n            return findMedianSortedArrays(nums2, nums1);\n        }\n        \n        int m = nums1.length;\n        int n = nums2.length;\n        int totalLeft = (m + n + 1) / 2;\n        \n        int left = 0;\n        int right = m;\n        \n        while (left <= right) {\n            int partition1 = (left + right) / 2;\n            int partition2 = totalLeft - partition1;\n            \n            // Handle edge cases\n            int maxLeft1 = (partition1 == 0) ? Integer.MIN_VALUE : nums1[partition1 - 1];\n            int minRight1 = (partition1 == m) ? Integer.MAX_VALUE : nums1[partition1];\n            \n            int maxLeft2 = (partition2 == 0) ? Integer.MIN_VALUE : nums2[partition2 - 1];\n            int minRight2 = (partition2 == n) ? Integer.MAX_VALUE : nums2[partition2];\n            \n            // Check if we found the correct partition\n            if (maxLeft1 <= minRight2 && maxLeft2 <= minRight1) {\n                // Found the correct partition\n                if ((m + n) % 2 == 0) {\n                    // Even number of elements\n                    return (Math.max(maxLeft1, maxLeft2) + Math.min(minRight1, minRight2)) / 2.0;\n                } else {\n                    // Odd number of elements\n                    return Math.max(maxLeft1, maxLeft2);\n                }\n            } else if (maxLeft1 > minRight2) {\n                // Need to move partition1 to the left\n                right = partition1 - 1;\n            } else {\n                // Need to move partition1 to the right\n                left = partition1 + 1;\n            }\n        }\n        \n        return 0.0; // Should never reach here\n    }\n}"
+  },
+  {
+    "submission_id": "2111766754",
+    "problem": {
+      "id": 234,
+      "title": "Palindrome Linked List",
+      "slug": "palindrome-linked-list",
+      "difficulty": "Easy",
+      "topics": [
+        "Linked List",
+        "Two Pointers",
+        "Stack",
+        "Recursion"
+      ],
+      "url": "https://leetcode.com/problems/palindrome-linked-list/"
+    },
+    "language": "java",
+    "status": "Accepted",
+    "submitted_at": "2026-08-18T17:18:11Z",
+    "runtime": "7 ms",
+    "memory": "99.5 MB",
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": "class Solution {\n    public boolean isPalindrome(ListNode head) {\n        List<Integer> values = new ArrayList<>();\n        ListNode current = head;\n        \n        // Store all values in ArrayList\n        while (current != null) {\n            values.add(current.val);\n            current = current.next;\n        }\n        \n        // Check if palindrome\n        int left = 0;\n        int right = values.size() - 1;\n        while (left < right) {\n            if (values.get(left) != values.get(right)) {\n                return false;\n            }\n            left++;\n            right--;\n        }\n        return true;\n    }\n}"
   }
 ]
