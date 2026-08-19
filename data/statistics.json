@@ -1,25 +1,26 @@
 {
-  "totalSolved": 11,
+  "totalSolved": 12,
   "easy": 7,
   "medium": 4,
-  "hard": 0,
+  "hard": 1,
   "byLanguage": {
-    "java": 10,
+    "java": 11,
     "cpp": 1
   },
   "byTopic": {
     "Two Pointers": 8,
     "Linked List": 7,
+    "Array": 4,
     "Hash Table": 4,
     "Floyd's Cycle Finding Algorithm": 4,
-    "Array": 3,
     "Math": 2,
+    "Binary Search": 2,
     "Recursion": 2,
     "Sorting": 1,
-    "Binary Search": 1,
     "Bit Manipulation": 1,
     "Pigeonhole Principle": 1,
-    "Stack": 1
+    "Stack": 1,
+    "Divide and Conquer": 1
   },
   "perDay": {
     "2026-05-04": 1,
@@ -30,22 +31,17 @@
     "2026-08-08": 2,
     "2026-08-14": 1,
     "2026-08-15": 1,
-    "2026-08-18": 1
-  },
-  "perWeek": {
-    "2026-W19": 1,
-    "2026-W32": 7,
-    "2026-W33": 2,
-    "2026-W34": 1
+    "2026-08-18": 1,
+    "2026-08-19": 1
   },
   "perMonth": {
     "2026-05": 1,
-    "2026-08": 10
+    "2026-08": 11
   },
   "perYear": {
-    "2026": 11
+    "2026": 12
   },
   "firstSolved": "2026-05-04",
-  "latestSolved": "2026-08-18",
-  "generatedAt": "2026-08-18T17:18:02Z"
+  "latestSolved": "2026-08-19",
+  "generatedAt": "2026-08-19T18:22:35.194Z"
 }
