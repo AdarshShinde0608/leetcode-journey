@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="380" height="100" viewBox="0 0 380 100">
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="100" viewBox="0 0 {width} {height}">
   <rect width="380" height="100" fill="#0d1117" rx="6"/>
   <text x="10" y="18" font-size="12" fill="#8b949e" font-family="monospace" font-weight="bold">Language Distribution</text>
   <text x="10" y="43" font-size="11" fill="#c9d1d9" font-family="monospace">java   </text>
-  <rect x="70" y="30" width="200" height="18" rx="3" fill="#58a6ff"/>
+  <rect x="70" y="30" width="202" height="18" rx="3" fill="#58a6ff"/>
   <rect x="70" y="30" width="220" height="18" rx="3" fill="none" stroke="#30363d"/>
-  <text x="276" y="43" font-size="11" fill="#8b949e" font-family="monospace">10 (90.9%)</text>
+  <text x="278" y="43" font-size="11" fill="#8b949e" font-family="monospace">11 (91.7%)</text>
   <text x="10" y="73" font-size="11" fill="#c9d1d9" font-family="monospace">cpp    </text>
-  <rect x="70" y="60" width="20" height="18" rx="3" fill="#58a6ff"/>
+  <rect x="70" y="60" width="18" height="18" rx="3" fill="#58a6ff"/>
   <rect x="70" y="60" width="220" height="18" rx="3" fill="none" stroke="#30363d"/>
-  <text x="96" y="73" font-size="11" fill="#8b949e" font-family="monospace">1 (9.1%)</text>
+  <text x="94" y="73" font-size="11" fill="#8b949e" font-family="monospace">1 (8.3%)</text>
 </svg>
