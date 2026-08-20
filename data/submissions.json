@@ -504,5 +504,29 @@
     "runtime_percentile": null,
     "memory_percentile": null,
     "code": "class Solution {\n    public boolean isPalindrome(ListNode head) {\n        List<Integer> values = new ArrayList<>();\n        ListNode current = head;\n        \n        // Store all values in ArrayList\n        while (current != null) {\n            values.add(current.val);\n            current = current.next;\n        }\n        \n        // Check if palindrome\n        int left = 0;\n        int right = values.size() - 1;\n        while (left < right) {\n            if (values.get(left) != values.get(right)) {\n                return false;\n            }\n            left++;\n            right--;\n        }\n        return true;\n    }\n}"
+  },
+  {
+    "submission_id": "2114220794",
+    "problem": {
+      "id": 209,
+      "title": "Minimum Size Subarray Sum",
+      "slug": "minimum-size-subarray-sum",
+      "difficulty": "Medium",
+      "topics": [
+        "Array",
+        "Binary Search",
+        "Sliding Window",
+        "Prefix Sum"
+      ],
+      "url": "https://leetcode.com/problems/minimum-size-subarray-sum/"
+    },
+    "language": "java",
+    "status": "Accepted",
+    "submitted_at": "2026-08-20T17:07:46Z",
+    "runtime": "1 ms",
+    "memory": "69.4 MB",
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": "class Solution {\n    public int minSubArrayLen(int target, int[] nums) {\n        int minLength = Integer.MAX_VALUE;\n        int windowSum = 0;\n        int left = 0;\n        \n        // Expand the window by moving right pointer\n        for (int right = 0; right < nums.length; right++) {\n            windowSum += nums[right];\n            \n            // Shrink the window from left while sum >= target\n            while (windowSum >= target) {\n                minLength = Math.min(minLength, right - left + 1);\n                windowSum -= nums[left];\n                left++;\n            }\n        }\n        \n        return minLength == Integer.MAX_VALUE ? 0 : minLength;\n    }\n}"
   }
 ]
