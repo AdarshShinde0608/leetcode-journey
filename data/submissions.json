@@ -528,5 +528,27 @@
     "runtime_percentile": null,
     "memory_percentile": null,
     "code": "class Solution {\n    public int minSubArrayLen(int target, int[] nums) {\n        int minLength = Integer.MAX_VALUE;\n        int windowSum = 0;\n        int left = 0;\n        \n        // Expand the window by moving right pointer\n        for (int right = 0; right < nums.length; right++) {\n            windowSum += nums[right];\n            \n            // Shrink the window from left while sum >= target\n            while (windowSum >= target) {\n                minLength = Math.min(minLength, right - left + 1);\n                windowSum -= nums[left];\n                left++;\n            }\n        }\n        \n        return minLength == Integer.MAX_VALUE ? 0 : minLength;\n    }\n}"
+  },
+  {
+    "submission_id": "2115256321",
+    "problem": {
+      "id": 206,
+      "title": "Reverse Linked List",
+      "slug": "reverse-linked-list",
+      "difficulty": "Easy",
+      "topics": [
+        "Linked List",
+        "Recursion"
+      ],
+      "url": "https://leetcode.com/problems/reverse-linked-list/"
+    },
+    "language": "java",
+    "status": "Accepted",
+    "submitted_at": "2026-08-21T16:20:24Z",
+    "runtime": "0 ms",
+    "memory": "44.2 MB",
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode reverseList(ListNode head) {\n        ListNode prev = null;\n        ListNode curr = head;\n        \n        while (curr != null) {\n            ListNode nextTemp = curr.next;  // Store next node\n            curr.next = prev;               // Reverse the pointer\n            prev = curr;                    // Move prev forward\n            curr = nextTemp;                // Move curr forward\n        }\n        \n        return prev;  // prev is the new head\n    }\n}"
   }
 ]
