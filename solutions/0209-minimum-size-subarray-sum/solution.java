@@ -1,21 +1,20 @@
 class Solution {
-    public int minSubArrayLen(int target, int[] nums) {
-        int minLength = Integer.MAX_VALUE;
-        int windowSum = 0;
-        int left = 0;
-        
-        // Expand the window by moving right pointer
-        for (int right = 0; right < nums.length; right++) {
-            windowSum += nums[right];
-            
-            // Shrink the window from left while sum >= target
-            while (windowSum >= target) {
-                minLength = Math.min(minLength, right - left + 1);
-                windowSum -= nums[left];
-                left++;
-            }
-        }
-        
-        return minLength == Integer.MAX_VALUE ? 0 : minLength;
+    public static int minSubArrayLen(int target, int[] nums) {
+        int n = nums.length;
+		int result = Integer.MAX_VALUE;
+		int low=0, high=0, sum=0;
+
+		while (high < n) {
+			sum += nums[high];
+
+			while (sum >= target) {
+				int len = high - low +1;
+				result = Math.min(len, result);
+				sum -= nums[low];
+				low++;
+			}
+			high++;
+		}
+        return result == Integer.MAX_VALUE ? 0 : result;
     }
 }
