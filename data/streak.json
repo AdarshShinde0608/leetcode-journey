@@ -16,12 +16,11 @@
     "2026-08-19": 1,
     "2026-08-20": 1,
     "2026-08-21": 1,
-    "2026-08-26": 3,
-    "2026-08-23": 1
+    "2026-08-26": 3
   },
-  "totalActiveDays": 14,
+  "totalActiveDays": 13,
   "todaySolved": 3,
   "dailyGoal": 1,
   "dailyGoalMet": true,
-  "generatedAt": "2026-08-26T06:53:21.016Z"
+  "generatedAt": "2026-08-26T06:53:28.687Z"
 }
