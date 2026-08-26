@@ -6,7 +6,7 @@
 | **Difficulty** | Medium |
 | **Language** | Java |
 | **Topics** | Array, Binary Search, Sliding Window, Prefix Sum |
-| **Date Solved** | 2026-08-20 |
+| **Date Solved** | 2026-08-26 |
 | **LeetCode** | [Link](https://leetcode.com/problems/minimum-size-subarray-sum/) |
 
 ## Approach
@@ -21,4 +21,4 @@
 ## Performance
 
 - **Runtime**: 1 ms
-- **Memory**: 69.4 MB
+- **Memory**: 69.2 MB
