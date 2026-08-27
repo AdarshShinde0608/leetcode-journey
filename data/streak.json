@@ -1,7 +1,7 @@
 {
-  "currentStreak": 1,
+  "currentStreak": 2,
   "longestStreak": 4,
-  "lastSolvedDate": "2026-08-26",
+  "lastSolvedDate": "2026-08-27",
   "streakStartDate": "2026-08-26",
   "dailyActivity": {
     "2026-08-15": 5,
@@ -16,11 +16,13 @@
     "2026-08-19": 1,
     "2026-08-20": 1,
     "2026-08-21": 1,
-    "2026-08-26": 3
+    "2026-08-26": 3,
+    "2026-08-23": 1,
+    "2026-08-27": 1
   },
-  "totalActiveDays": 13,
-  "todaySolved": 3,
+  "totalActiveDays": 15,
+  "todaySolved": 1,
   "dailyGoal": 1,
   "dailyGoalMet": true,
-  "generatedAt": "2026-08-26T06:53:28.687Z"
+  "generatedAt": "2026-08-27T04:56:29.074Z"
 }
