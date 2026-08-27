@@ -646,5 +646,29 @@
     "runtime_percentile": null,
     "memory_percentile": null,
     "code": "class Solution {\n\tpublic static int max_array (int[] arr) {\n\t\tint max = arr[0];\n\t\tfor (int i = 1; i < arr.length; i++) {\n\t\t\tif (arr[i] > max) {\n\t\t\t\tmax = arr[i];\n\t\t\t}\n\t\t}\n\t\treturn max;\n\t}\n\n    public static boolean maxSubarraySum(int[] arr, int k, int target) {\n\t\t// if (k<2) {\n\t\t// \treturn ;\n\t\t// }\n\t\n\n        int n = arr.length;\n\t\tint sum=0, low = 0, high = k-1;\n\t\t\n\t\tfor (int i=low; i<=high; i++) {\n\t\t\tsum += arr[i];\n\t\t}\n\n        if (sum == target) return true;\n\n\t\tint newsum = 0;\n\t\tlow ++; high++;\n\n\t\twhile (high != n) {\n\t\t\tnewsum = sum - arr[low-1] + arr[high];\n\t\t\tsum = newsum;\n\t\t\tlow++; high++;\n            if (sum == target) return true;\n\t\t}\n        return false;\n    }\n\n    public int minSubArrayLen(int target, int[] nums) {\n        if (target==11 && nums[2]!=1) return 3;\n        if (target==20) return 2;\n        if (target==213) return 8;\n        if (target==6) return 1;\n        if (target==15 && nums[1]!=2) return 2;\n        if (target==697439) return 132;\n        if (target==396893380) return 79517;\n        if (target==1000000000) return 100000;\n        if (target==7 && nums[0]==8) return 1;\n        if (target==50000) return 50000;\n        if (target==10) return 3;\n        int size = nums.length;\n        int result_sum = 0;\n        for (int i=1; i<=size; i++) {\n            if (maxSubarraySum(nums, i, target)) return i;\n        }\n        return 0;\n    }\n}"
+  },
+  {
+    "submission_id": "dom_1787806578631",
+    "problem": {
+      "id": 209,
+      "title": "Minimum Size Subarray Sum",
+      "slug": "minimum-size-subarray-sum",
+      "difficulty": "Medium",
+      "topics": [
+        "Array",
+        "Binary Search",
+        "Sliding Window",
+        "Prefix Sum"
+      ],
+      "url": "https://leetcode.com/problems/minimum-size-subarray-sum/"
+    },
+    "language": "unknown",
+    "status": "Accepted",
+    "submitted_at": "2026-08-27T04:56:18Z",
+    "runtime": null,
+    "memory": null,
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": ""
   }
 ]
