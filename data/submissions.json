@@ -670,5 +670,29 @@
     "runtime_percentile": null,
     "memory_percentile": null,
     "code": ""
+  },
+  {
+    "submission_id": "dom_1787806885548",
+    "problem": {
+      "id": 209,
+      "title": "Minimum Size Subarray Sum",
+      "slug": "minimum-size-subarray-sum",
+      "difficulty": "Medium",
+      "topics": [
+        "Array",
+        "Binary Search",
+        "Sliding Window",
+        "Prefix Sum"
+      ],
+      "url": "https://leetcode.com/problems/minimum-size-subarray-sum/"
+    },
+    "language": "unknown",
+    "status": "Accepted",
+    "submitted_at": "2026-08-27T05:01:25Z",
+    "runtime": null,
+    "memory": null,
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": ""
   }
 ]
