@@ -4,9 +4,9 @@
 |-------|-------|
 | **Problem #** | 209 |
 | **Difficulty** | Medium |
-| **Language** | Java |
+| **Language** | unknown |
 | **Topics** | Array, Binary Search, Sliding Window, Prefix Sum |
-| **Date Solved** | 2026-08-26 |
+| **Date Solved** | 2026-08-27 |
 | **LeetCode** | [Link](https://leetcode.com/problems/minimum-size-subarray-sum/) |
 
 ## Approach
@@ -17,8 +17,3 @@
 
 - **Time**: O(?)
 - **Space**: O(?)
-
-## Performance
-
-- **Runtime**: 1 ms
-- **Memory**: 69.2 MB
