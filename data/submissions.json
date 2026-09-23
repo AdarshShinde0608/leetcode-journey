@@ -19,7 +19,8 @@
     "memory": "47.1 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "import java.util.HashMap;\n\nclass Solution {\n    public int[] twoSum(int[] nums, int target) {\n        HashMap<Integer, Integer> map = new HashMap<>();\n        \n        for (int i = 0; i < nums.length; i++) {\n            int complement = target - nums[i];\n            if (map.containsKey(complement)) {\n                return new int[] { map.get(complement), i };\n            }\n            map.put(nums[i], i);\n        }\n        \n        // The problem guarantees a solution, so this line is never reached\n        return new int[] {};\n    }\n}"
+    "code": "import java.util.HashMap;\n\nclass Solution {\n    public int[] twoSum(int[] nums, int target) {\n        HashMap<Integer, Integer> map = new HashMap<>();\n        \n        for (int i = 0; i < nums.length; i++) {\n            int complement = target - nums[i];\n            if (map.containsKey(complement)) {\n                return new int[] { map.get(complement), i };\n            }\n            map.put(nums[i], i);\n        }\n        \n        // The problem guarantees a solution, so this line is never reached\n        return new int[] {};\n    }\n}",
+    "platform": "leetcode"
   },
   {
     "submission_id": "2098722999",
@@ -41,7 +42,8 @@
     "memory": "202.7 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode deleteMiddle(ListNode head) {\n        if (head.next == null) return null;\n        if (head.next.next == null) {\n            head.next=null;\n            return head;\n        }\n\n        ListNode s=head;\n        ListNode f=s;\n        ListNode pre=s;\n\n\n        while (f.next!=null && f.next.next!=null) {\n            pre = s;\n            s = s.next;\n            f = f.next.next;\n        }\n\n        if (f.next == null){\n            delete(pre, s);\n            return head;\n        }\n        delete(pre.next, s.next);\n        return head;\n    }\n\n    public void delete(ListNode previous, ListNode node) {\n        node = node.next;\n        previous.next = node;\n    }\n}\n"
+    "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode deleteMiddle(ListNode head) {\n        if (head.next == null) return null;\n        if (head.next.next == null) {\n            head.next=null;\n            return head;\n        }\n\n        ListNode s=head;\n        ListNode f=s;\n        ListNode pre=s;\n\n\n        while (f.next!=null && f.next.next!=null) {\n            pre = s;\n            s = s.next;\n            f = f.next.next;\n        }\n\n        if (f.next == null){\n            delete(pre, s);\n            return head;\n        }\n        delete(pre.next, s.next);\n        return head;\n    }\n\n    public void delete(ListNode previous, ListNode node) {\n        node = node.next;\n        previous.next = node;\n    }\n}\n",
+    "platform": "leetcode"
   },
   {
     "submission_id": "2098710097",
@@ -63,7 +65,8 @@
     "memory": "202.5 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode deleteMiddle(ListNode head) {\n        if (head.next == null) return null;\n\n        ListNode s=head;\n        ListNode f=s;\n\n        while (f.next!=null && f.next.next!=null) {\n            s = s.next;\n            f = f.next.next;\n        }\n\n        if (f.next == null){\n            delete(s, head);\n            return head;\n        }\n        delete(s.next, head);\n        return head;\n    }\n\n    public void delete(ListNode node, ListNode head) {\n        ListNode t=head;\n\n        while (t.next!=node) {\n            t = t.next;\n        }\n        node = node.next;\n        t.next = node;\n    }\n}\n"
+    "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode deleteMiddle(ListNode head) {\n        if (head.next == null) return null;\n\n        ListNode s=head;\n        ListNode f=s;\n\n        while (f.next!=null && f.next.next!=null) {\n            s = s.next;\n            f = f.next.next;\n        }\n\n        if (f.next == null){\n            delete(s, head);\n            return head;\n        }\n        delete(s.next, head);\n        return head;\n    }\n\n    public void delete(ListNode node, ListNode head) {\n        ListNode t=head;\n\n        while (t.next!=node) {\n            t = t.next;\n        }\n        node = node.next;\n        t.next = node;\n    }\n}\n",
+    "platform": "leetcode"
   },
   {
     "submission_id": "2098688815",
@@ -85,7 +88,8 @@
     "memory": "42.9 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode middleNode(ListNode head) {\n        ListNode s;\n        ListNode f;\n        s = head; f = s;\n\n        while (f.next!=null && f.next.next!=null) {\n            s = s.next;\n            f = f.next.next;\n        }\n\n        if (f.next == null){\n            return s;\n        }\n        return s.next;\n    }\n}"
+    "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode middleNode(ListNode head) {\n        ListNode s;\n        ListNode f;\n        s = head; f = s;\n\n        while (f.next!=null && f.next.next!=null) {\n            s = s.next;\n            f = f.next.next;\n        }\n\n        if (f.next == null){\n            return s;\n        }\n        return s.next;\n    }\n}",
+    "platform": "leetcode"
   },
   {
     "submission_id": "2096018165",
@@ -111,7 +115,8 @@
     "memory": "82.6 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "class Solution {\n    public int findDuplicate(int[] nums) {\n        int s=0, f=0;\n        while (true) {\n            s = nums[s];\n            f = nums[f]; f = nums[f];\n            if (s==f) {\n                s=0;\n                while (s!=f) {\n                    s=nums[s];\n                    f=nums[f];\n                }\n                return s;\n            }\n        }\n    }\n}"
+    "code": "class Solution {\n    public int findDuplicate(int[] nums) {\n        int s=0, f=0;\n        while (true) {\n            s = nums[s];\n            f = nums[f]; f = nums[f];\n            if (s==f) {\n                s=0;\n                while (s!=f) {\n                    s=nums[s];\n                    f=nums[f];\n                }\n                return s;\n            }\n        }\n    }\n}",
+    "platform": "leetcode"
   },
   {
     "submission_id": "2094697333",
@@ -135,7 +140,8 @@
     "memory": "41.7 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "class Solution { \n    public static int sum(int n) {\n        int sum=0;\n        while (n>0) {\n            int d=n%10;\n            n=n/10;\n            sum += (d*d);\n        }\n        return sum;\n    } \n\n    public boolean isHappy(int n) {\n        int slow = n;\n        int fast = n;\n\n        while (fast!=1) {\n            slow = sum(slow);\n            fast = sum(fast);\n            fast = sum(fast);\n            if (slow==fast && slow!=1) {\n                return false;\n            }\n        }\n        return true;\n    }\n}"
+    "code": "class Solution { \n    public static int sum(int n) {\n        int sum=0;\n        while (n>0) {\n            int d=n%10;\n            n=n/10;\n            sum += (d*d);\n        }\n        return sum;\n    } \n\n    public boolean isHappy(int n) {\n        int slow = n;\n        int fast = n;\n\n        while (fast!=1) {\n            slow = sum(slow);\n            fast = sum(fast);\n            fast = sum(fast);\n            if (slow==fast && slow!=1) {\n                return false;\n            }\n        }\n        return true;\n    }\n}",
+    "platform": "leetcode"
   },
   {
     "submission_id": "2094393580",
@@ -159,7 +165,8 @@
     "memory": "46.6 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "/**\n * Definition for singly-linked list.\n * class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode(int x) {\n *         val = x;\n *         next = null;\n *     }\n * }\n */\npublic class Solution {\n    public ListNode detectCycle(ListNode head) {\n        ListNode s=head;\n        ListNode f;\n        f = s;\n\n        if (f==null || f.next==null || f.next.next==null) return null;\n\n        s = s.next;\n        f = f.next.next;\n        while (f.next!=null && f.next.next!=null) {\n            if (s == f) {\n                s = head;\n                while (s != f) {\n                    f=f.next;\n                    s=s.next;\n                }\n                return s;\n            }\n            f=f.next.next;\n            s=s.next;\n        }\n        return null;\n    }\n}"
+    "code": "/**\n * Definition for singly-linked list.\n * class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode(int x) {\n *         val = x;\n *         next = null;\n *     }\n * }\n */\npublic class Solution {\n    public ListNode detectCycle(ListNode head) {\n        ListNode s=head;\n        ListNode f;\n        f = s;\n\n        if (f==null || f.next==null || f.next.next==null) return null;\n\n        s = s.next;\n        f = f.next.next;\n        while (f.next!=null && f.next.next!=null) {\n            if (s == f) {\n                s = head;\n                while (s != f) {\n                    f=f.next;\n                    s=s.next;\n                }\n                return s;\n            }\n            f=f.next.next;\n            s=s.next;\n        }\n        return null;\n    }\n}",
+    "platform": "leetcode"
   },
   {
     "submission_id": "2094393009",
@@ -183,7 +190,8 @@
     "memory": "46.5 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "/**\n * Definition for singly-linked list.\n * class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode(int x) {\n *         val = x;\n *         next = null;\n *     }\n * }\n */\npublic class Solution {\n    public ListNode detectCycle(ListNode head) {\n        ListNode s=head;\n        ListNode f;\n        f = s;\n\n        if (f==null || f.next==null || f.next.next==null) return null;\n\n        s = s.next;\n        f = f.next.next;\n        while (f.next!=null && f.next.next!=null) {\n            if (s == f) {\n                s = head;\n                while (s != f) {\n                    f=f.next;\n                    s=s.next;\n                }\n                return s;\n            }\n            f=f.next.next;\n            s=s.next;\n        }\n        return null;\n    }\n}"
+    "code": "/**\n * Definition for singly-linked list.\n * class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode(int x) {\n *         val = x;\n *         next = null;\n *     }\n * }\n */\npublic class Solution {\n    public ListNode detectCycle(ListNode head) {\n        ListNode s=head;\n        ListNode f;\n        f = s;\n\n        if (f==null || f.next==null || f.next.next==null) return null;\n\n        s = s.next;\n        f = f.next.next;\n        while (f.next!=null && f.next.next!=null) {\n            if (s == f) {\n                s = head;\n                while (s != f) {\n                    f=f.next;\n                    s=s.next;\n                }\n                return s;\n            }\n            f=f.next.next;\n            s=s.next;\n        }\n        return null;\n    }\n}",
+    "platform": "leetcode"
   },
   {
     "submission_id": "2092702155",
@@ -207,7 +215,8 @@
     "memory": "46.9 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "/**\n * Definition for singly-linked list.\n * class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode(int x) {\n *         val = x;\n *         next = null;\n *     }\n * }\n */\npublic class Solution {\n    public boolean hasCycle(ListNode head) {\n        ListNode s;\n        ListNode f;\n\n        if (head == null || head.next == null) return false; \n        \n        s = head; f = s;\n\n        while (f.next != null && f.next.next != null) {\n            s = s.next; f = f.next.next;\n\n            if (s == f) return true;\n        }\n        return false;\n    }\n}"
+    "code": "/**\n * Definition for singly-linked list.\n * class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode(int x) {\n *         val = x;\n *         next = null;\n *     }\n * }\n */\npublic class Solution {\n    public boolean hasCycle(ListNode head) {\n        ListNode s;\n        ListNode f;\n\n        if (head == null || head.next == null) return false; \n        \n        s = head; f = s;\n\n        while (f.next != null && f.next.next != null) {\n            s = s.next; f = f.next.next;\n\n            if (s == f) return true;\n        }\n        return false;\n    }\n}",
+    "platform": "leetcode"
   },
   {
     "submission_id": "2092583646",
@@ -228,7 +237,8 @@
     "memory": "45.5 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode deleteDuplicates(ListNode head) {\n        if (head == null || head.next == null) return head;\n        \n        ListNode cur=head;\n        ListNode t = cur.next;\n\n        while (cur.next != null) {\n            if (cur.val == t.val) {\n                while (cur.val == t.val) {\n                    t = t.next;\n                    if (t == null) {\n                        cur.next = null;\n                        return head;\n                    }\n                }\n                cur.next = t;\n            }\n            t = t.next;\n            cur = cur.next;\n        }\n        return head;\n    }\n}"
+    "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode deleteDuplicates(ListNode head) {\n        if (head == null || head.next == null) return head;\n        \n        ListNode cur=head;\n        ListNode t = cur.next;\n\n        while (cur.next != null) {\n            if (cur.val == t.val) {\n                while (cur.val == t.val) {\n                    t = t.next;\n                    if (t == null) {\n                        cur.next = null;\n                        return head;\n                    }\n                }\n                cur.next = t;\n            }\n            t = t.next;\n            cur = cur.next;\n        }\n        return head;\n    }\n}",
+    "platform": "leetcode"
   },
   {
     "submission_id": "1995137280",
@@ -251,7 +261,8 @@
     "memory": "30.2 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "class Solution {\npublic:\n    vector<int> sortedSquares(vector<int>& nums) {\n        for(int i=0; i<nums.size(); i++){\n            nums[i] *= nums[i];\n        }\n\n        for(int j=nums.size()-1; j>0; j--){\n            for(int i=0; i<j; i++){\n                if(nums[i]>nums[i+1]){\n                    swap(nums[i], nums[i+1]);\n                }\n            }\n        }\n        return nums;\n    }\n};"
+    "code": "class Solution {\npublic:\n    vector<int> sortedSquares(vector<int>& nums) {\n        for(int i=0; i<nums.size(); i++){\n            nums[i] *= nums[i];\n        }\n\n        for(int j=nums.size()-1; j>0; j--){\n            for(int i=0; i<j; i++){\n                if(nums[i]>nums[i+1]){\n                    swap(nums[i], nums[i+1]);\n                }\n            }\n        }\n        return nums;\n    }\n};",
+    "platform": "leetcode"
   },
   {
     "submission_id": "2107139371",
@@ -273,7 +284,8 @@
     "memory": "47.2 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "import java.util.HashMap;\n\nclass Solution {\n    public int[] twoSum(int[] nums, int target) {\n        HashMap<Integer, Integer> map = new HashMap<>();\n        \n        for (int i = 0; i < nums.length; i++) {\n            int complement = target - nums[i];\n            if (map.containsKey(complement)) {\n                return new int[] { map.get(complement), i };\n            }\n            map.put(nums[i], i);\n        }\n        \n        // The problem guarantees a solution, so this line is never reached\n        return new int[] {};\n    }\n}"
+    "code": "import java.util.HashMap;\n\nclass Solution {\n    public int[] twoSum(int[] nums, int target) {\n        HashMap<Integer, Integer> map = new HashMap<>();\n        \n        for (int i = 0; i < nums.length; i++) {\n            int complement = target - nums[i];\n            if (map.containsKey(complement)) {\n                return new int[] { map.get(complement), i };\n            }\n            map.put(nums[i], i);\n        }\n        \n        // The problem guarantees a solution, so this line is never reached\n        return new int[] {};\n    }\n}",
+    "platform": "leetcode"
   },
   {
     "submission_id": "2106947817",
@@ -295,7 +307,8 @@
     "memory": "47.1 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "import java.util.HashMap;\n\nclass Solution {\n    public int[] twoSum(int[] nums, int target) {\n        HashMap<Integer, Integer> map = new HashMap<>();\n        \n        for (int i = 0; i < nums.length; i++) {\n            int complement = target - nums[i];\n            if (map.containsKey(complement)) {\n                return new int[] { map.get(complement), i };\n            }\n            map.put(nums[i], i);\n        }\n        \n        // The problem guarantees a solution, so this line is never reached\n        return new int[] {};\n    }\n}"
+    "code": "import java.util.HashMap;\n\nclass Solution {\n    public int[] twoSum(int[] nums, int target) {\n        HashMap<Integer, Integer> map = new HashMap<>();\n        \n        for (int i = 0; i < nums.length; i++) {\n            int complement = target - nums[i];\n            if (map.containsKey(complement)) {\n                return new int[] { map.get(complement), i };\n            }\n            map.put(nums[i], i);\n        }\n        \n        // The problem guarantees a solution, so this line is never reached\n        return new int[] {};\n    }\n}",
+    "platform": "leetcode"
   },
   {
     "submission_id": "2106947099",
@@ -317,7 +330,8 @@
     "memory": "47.1 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "import java.util.HashMap;\n\nclass Solution {\n    public int[] twoSum(int[] nums, int target) {\n        HashMap<Integer, Integer> map = new HashMap<>();\n        \n        for (int i = 0; i < nums.length; i++) {\n            int complement = target - nums[i];\n            if (map.containsKey(complement)) {\n                return new int[] { map.get(complement), i };\n            }\n            map.put(nums[i], i);\n        }\n        \n        // The problem guarantees a solution, so this line is never reached\n        return new int[] {};\n    }\n}"
+    "code": "import java.util.HashMap;\n\nclass Solution {\n    public int[] twoSum(int[] nums, int target) {\n        HashMap<Integer, Integer> map = new HashMap<>();\n        \n        for (int i = 0; i < nums.length; i++) {\n            int complement = target - nums[i];\n            if (map.containsKey(complement)) {\n                return new int[] { map.get(complement), i };\n            }\n            map.put(nums[i], i);\n        }\n        \n        // The problem guarantees a solution, so this line is never reached\n        return new int[] {};\n    }\n}",
+    "platform": "leetcode"
   },
   {
     "submission_id": "2098709790",
@@ -339,7 +353,8 @@
     "memory": "202.7 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode deleteMiddle(ListNode head) {\n        if (head.next == null) return null;\n\n        ListNode s=head;\n        ListNode f=s;\n\n        while (f.next!=null && f.next.next!=null) {\n            s = s.next;\n            f = f.next.next;\n        }\n\n        if (f.next == null){\n            delete(s, head);\n            return head;\n        }\n        delete(s.next, head);\n        return head;\n    }\n\n    public void delete(ListNode node, ListNode head) {\n        ListNode t=head;\n\n        while (t.next!=node) {\n            t = t.next;\n        }\n        node = node.next;\n        t.next = node;\n    }\n}\n"
+    "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode deleteMiddle(ListNode head) {\n        if (head.next == null) return null;\n\n        ListNode s=head;\n        ListNode f=s;\n\n        while (f.next!=null && f.next.next!=null) {\n            s = s.next;\n            f = f.next.next;\n        }\n\n        if (f.next == null){\n            delete(s, head);\n            return head;\n        }\n        delete(s.next, head);\n        return head;\n    }\n\n    public void delete(ListNode node, ListNode head) {\n        ListNode t=head;\n\n        while (t.next!=node) {\n            t = t.next;\n        }\n        node = node.next;\n        t.next = node;\n    }\n}\n",
+    "platform": "leetcode"
   },
   {
     "submission_id": "2094697434",
@@ -363,7 +378,8 @@
     "memory": "42.5 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "class Solution { \n    public static int sum(int n) {\n        int sum=0;\n        while (n>0) {\n            int d=n%10;\n            n=n/10;\n            sum += (d*d);\n        }\n        return sum;\n    } \n\n    public boolean isHappy(int n) {\n        int slow = n;\n        int fast = n;\n\n        while (fast!=1) {\n            slow = sum(slow);\n            fast = sum(fast);\n            fast = sum(fast);\n            if (slow==fast && slow!=1) {\n                return false;\n            }\n        }\n        return true;\n    }\n}"
+    "code": "class Solution { \n    public static int sum(int n) {\n        int sum=0;\n        while (n>0) {\n            int d=n%10;\n            n=n/10;\n            sum += (d*d);\n        }\n        return sum;\n    } \n\n    public boolean isHappy(int n) {\n        int slow = n;\n        int fast = n;\n\n        while (fast!=1) {\n            slow = sum(slow);\n            fast = sum(fast);\n            fast = sum(fast);\n            if (slow==fast && slow!=1) {\n                return false;\n            }\n        }\n        return true;\n    }\n}",
+    "platform": "leetcode"
   },
   {
     "submission_id": "2107358724",
@@ -386,7 +402,8 @@
     "memory": "46.4 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {\n        ListNode dummy = new ListNode(0);\n        ListNode current = dummy;\n        int carry = 0;\n        \n        while (l1 != null || l2 != null || carry != 0) {\n            int val1 = (l1 != null) ? l1.val : 0;\n            int val2 = (l2 != null) ? l2.val : 0;\n            \n            int sum = val1 + val2 + carry;\n            carry = sum / 10;\n            int digit = sum % 10;\n            \n            current.next = new ListNode(digit);\n            current = current.next;\n            \n            if (l1 != null) l1 = l1.next;\n            if (l2 != null) l2 = l2.next;\n        }\n        \n        return dummy.next;\n    }\n}"
+    "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {\n        ListNode dummy = new ListNode(0);\n        ListNode current = dummy;\n        int carry = 0;\n        \n        while (l1 != null || l2 != null || carry != 0) {\n            int val1 = (l1 != null) ? l1.val : 0;\n            int val2 = (l2 != null) ? l2.val : 0;\n            \n            int sum = val1 + val2 + carry;\n            carry = sum / 10;\n            int digit = sum % 10;\n            \n            current.next = new ListNode(digit);\n            current = current.next;\n            \n            if (l1 != null) l1 = l1.next;\n            if (l2 != null) l2 = l2.next;\n        }\n        \n        return dummy.next;\n    }\n}",
+    "platform": "leetcode"
   },
   {
     "submission_id": "2107358169",
@@ -409,7 +426,8 @@
     "memory": "46.6 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {\n        ListNode dummy = new ListNode(0);\n        ListNode current = dummy;\n        int carry = 0;\n        \n        while (l1 != null || l2 != null || carry != 0) {\n            int val1 = (l1 != null) ? l1.val : 0;\n            int val2 = (l2 != null) ? l2.val : 0;\n            \n            int sum = val1 + val2 + carry;\n            carry = sum / 10;\n            int digit = sum % 10;\n            \n            current.next = new ListNode(digit);\n            current = current.next;\n            \n            if (l1 != null) l1 = l1.next;\n            if (l2 != null) l2 = l2.next;\n        }\n        \n        return dummy.next;\n    }\n}"
+    "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {\n        ListNode dummy = new ListNode(0);\n        ListNode current = dummy;\n        int carry = 0;\n        \n        while (l1 != null || l2 != null || carry != 0) {\n            int val1 = (l1 != null) ? l1.val : 0;\n            int val2 = (l2 != null) ? l2.val : 0;\n            \n            int sum = val1 + val2 + carry;\n            carry = sum / 10;\n            int digit = sum % 10;\n            \n            current.next = new ListNode(digit);\n            current = current.next;\n            \n            if (l1 != null) l1 = l1.next;\n            if (l2 != null) l2 = l2.next;\n        }\n        \n        return dummy.next;\n    }\n}",
+    "platform": "leetcode"
   },
   {
     "submission_id": "2107357085",
@@ -432,7 +450,8 @@
     "memory": "46.3 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {\n        ListNode dummy = new ListNode(0);\n        ListNode current = dummy;\n        int carry = 0;\n        \n        while (l1 != null || l2 != null || carry != 0) {\n            int val1 = (l1 != null) ? l1.val : 0;\n            int val2 = (l2 != null) ? l2.val : 0;\n            \n            int sum = val1 + val2 + carry;\n            carry = sum / 10;\n            int digit = sum % 10;\n            \n            current.next = new ListNode(digit);\n            current = current.next;\n            \n            if (l1 != null) l1 = l1.next;\n            if (l2 != null) l2 = l2.next;\n        }\n        \n        return dummy.next;\n    }\n}"
+    "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {\n        ListNode dummy = new ListNode(0);\n        ListNode current = dummy;\n        int carry = 0;\n        \n        while (l1 != null || l2 != null || carry != 0) {\n            int val1 = (l1 != null) ? l1.val : 0;\n            int val2 = (l2 != null) ? l2.val : 0;\n            \n            int sum = val1 + val2 + carry;\n            carry = sum / 10;\n            int digit = sum % 10;\n            \n            current.next = new ListNode(digit);\n            current = current.next;\n            \n            if (l1 != null) l1 = l1.next;\n            if (l2 != null) l2 = l2.next;\n        }\n        \n        return dummy.next;\n    }\n}",
+    "platform": "leetcode"
   },
   {
     "submission_id": "2111765110",
@@ -456,7 +475,8 @@
     "memory": "99.6 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "class Solution {\n    public boolean isPalindrome(ListNode head) {\n        List<Integer> values = new ArrayList<>();\n        ListNode current = head;\n        \n        // Store all values in ArrayList\n        while (current != null) {\n            values.add(current.val);\n            current = current.next;\n        }\n        \n        // Check if palindrome\n        int left = 0;\n        int right = values.size() - 1;\n        while (left < right) {\n            if (values.get(left) != values.get(right)) {\n                return false;\n            }\n            left++;\n            right--;\n        }\n        return true;\n    }\n}"
+    "code": "class Solution {\n    public boolean isPalindrome(ListNode head) {\n        List<Integer> values = new ArrayList<>();\n        ListNode current = head;\n        \n        // Store all values in ArrayList\n        while (current != null) {\n            values.add(current.val);\n            current = current.next;\n        }\n        \n        // Check if palindrome\n        int left = 0;\n        int right = values.size() - 1;\n        while (left < right) {\n            if (values.get(left) != values.get(right)) {\n                return false;\n            }\n            left++;\n            right--;\n        }\n        return true;\n    }\n}",
+    "platform": "leetcode"
   },
   {
     "submission_id": "2113110285",
@@ -479,7 +499,8 @@
     "memory": "49 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "class Solution {\n    public double findMedianSortedArrays(int[] nums1, int[] nums2) {\n        // Ensure nums1 is the smaller array for optimization\n        if (nums1.length > nums2.length) {\n            return findMedianSortedArrays(nums2, nums1);\n        }\n        \n        int m = nums1.length;\n        int n = nums2.length;\n        int totalLeft = (m + n + 1) / 2;\n        \n        int left = 0;\n        int right = m;\n        \n        while (left <= right) {\n            int partition1 = (left + right) / 2;\n            int partition2 = totalLeft - partition1;\n            \n            // Handle edge cases\n            int maxLeft1 = (partition1 == 0) ? Integer.MIN_VALUE : nums1[partition1 - 1];\n            int minRight1 = (partition1 == m) ? Integer.MAX_VALUE : nums1[partition1];\n            \n            int maxLeft2 = (partition2 == 0) ? Integer.MIN_VALUE : nums2[partition2 - 1];\n            int minRight2 = (partition2 == n) ? Integer.MAX_VALUE : nums2[partition2];\n            \n            // Check if we found the correct partition\n            if (maxLeft1 <= minRight2 && maxLeft2 <= minRight1) {\n                // Found the correct partition\n                if ((m + n) % 2 == 0) {\n                    // Even number of elements\n                    return (Math.max(maxLeft1, maxLeft2) + Math.min(minRight1, minRight2)) / 2.0;\n                } else {\n                    // Odd number of elements\n                    return Math.max(maxLeft1, maxLeft2);\n                }\n            } else if (maxLeft1 > minRight2) {\n                // Need to move partition1 to the left\n                right = partition1 - 1;\n            } else {\n                // Need to move partition1 to the right\n                left = partition1 + 1;\n            }\n        }\n        \n        return 0.0; // Should never reach here\n    }\n}"
+    "code": "class Solution {\n    public double findMedianSortedArrays(int[] nums1, int[] nums2) {\n        // Ensure nums1 is the smaller array for optimization\n        if (nums1.length > nums2.length) {\n            return findMedianSortedArrays(nums2, nums1);\n        }\n        \n        int m = nums1.length;\n        int n = nums2.length;\n        int totalLeft = (m + n + 1) / 2;\n        \n        int left = 0;\n        int right = m;\n        \n        while (left <= right) {\n            int partition1 = (left + right) / 2;\n            int partition2 = totalLeft - partition1;\n            \n            // Handle edge cases\n            int maxLeft1 = (partition1 == 0) ? Integer.MIN_VALUE : nums1[partition1 - 1];\n            int minRight1 = (partition1 == m) ? Integer.MAX_VALUE : nums1[partition1];\n            \n            int maxLeft2 = (partition2 == 0) ? Integer.MIN_VALUE : nums2[partition2 - 1];\n            int minRight2 = (partition2 == n) ? Integer.MAX_VALUE : nums2[partition2];\n            \n            // Check if we found the correct partition\n            if (maxLeft1 <= minRight2 && maxLeft2 <= minRight1) {\n                // Found the correct partition\n                if ((m + n) % 2 == 0) {\n                    // Even number of elements\n                    return (Math.max(maxLeft1, maxLeft2) + Math.min(minRight1, minRight2)) / 2.0;\n                } else {\n                    // Odd number of elements\n                    return Math.max(maxLeft1, maxLeft2);\n                }\n            } else if (maxLeft1 > minRight2) {\n                // Need to move partition1 to the left\n                right = partition1 - 1;\n            } else {\n                // Need to move partition1 to the right\n                left = partition1 + 1;\n            }\n        }\n        \n        return 0.0; // Should never reach here\n    }\n}",
+    "platform": "leetcode"
   },
   {
     "submission_id": "2111766754",
@@ -503,7 +524,8 @@
     "memory": "99.5 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "class Solution {\n    public boolean isPalindrome(ListNode head) {\n        List<Integer> values = new ArrayList<>();\n        ListNode current = head;\n        \n        // Store all values in ArrayList\n        while (current != null) {\n            values.add(current.val);\n            current = current.next;\n        }\n        \n        // Check if palindrome\n        int left = 0;\n        int right = values.size() - 1;\n        while (left < right) {\n            if (values.get(left) != values.get(right)) {\n                return false;\n            }\n            left++;\n            right--;\n        }\n        return true;\n    }\n}"
+    "code": "class Solution {\n    public boolean isPalindrome(ListNode head) {\n        List<Integer> values = new ArrayList<>();\n        ListNode current = head;\n        \n        // Store all values in ArrayList\n        while (current != null) {\n            values.add(current.val);\n            current = current.next;\n        }\n        \n        // Check if palindrome\n        int left = 0;\n        int right = values.size() - 1;\n        while (left < right) {\n            if (values.get(left) != values.get(right)) {\n                return false;\n            }\n            left++;\n            right--;\n        }\n        return true;\n    }\n}",
+    "platform": "leetcode"
   },
   {
     "submission_id": "2116947946",
@@ -550,7 +572,8 @@
     "memory": "44.2 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode reverseList(ListNode head) {\n        ListNode prev = null;\n        ListNode curr = head;\n        \n        while (curr != null) {\n            ListNode nextTemp = curr.next;  // Store next node\n            curr.next = prev;               // Reverse the pointer\n            prev = curr;                    // Move prev forward\n            curr = nextTemp;                // Move curr forward\n        }\n        \n        return prev;  // prev is the new head\n    }\n}"
+    "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode reverseList(ListNode head) {\n        ListNode prev = null;\n        ListNode curr = head;\n        \n        while (curr != null) {\n            ListNode nextTemp = curr.next;  // Store next node\n            curr.next = prev;               // Reverse the pointer\n            prev = curr;                    // Move prev forward\n            curr = nextTemp;                // Move curr forward\n        }\n        \n        return prev;  // prev is the new head\n    }\n}",
+    "platform": "leetcode"
   },
   {
     "submission_id": "2120487989",
@@ -574,7 +597,8 @@
     "memory": "69.2 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "class Solution {\n    public static int minSubArrayLen(int target, int[] nums) {\n        int n = nums.length;\n\t\tint result = Integer.MAX_VALUE;\n\t\tint low=0, high=0, sum=0;\n\n\t\twhile (high < n) {\n\t\t\tsum += nums[high];\n\n\t\t\twhile (sum >= target) {\n\t\t\t\tint len = high - low +1;\n\t\t\t\tresult = Math.min(len, result);\n\t\t\t\tsum -= nums[low];\n\t\t\t\tlow++;\n\t\t\t}\n\t\t\thigh++;\n\t\t}\n        return result == Integer.MAX_VALUE ? 0 : result;\n    }\n}"
+    "code": "class Solution {\n    public static int minSubArrayLen(int target, int[] nums) {\n        int n = nums.length;\n\t\tint result = Integer.MAX_VALUE;\n\t\tint low=0, high=0, sum=0;\n\n\t\twhile (high < n) {\n\t\t\tsum += nums[high];\n\n\t\t\twhile (sum >= target) {\n\t\t\t\tint len = high - low +1;\n\t\t\t\tresult = Math.min(len, result);\n\t\t\t\tsum -= nums[low];\n\t\t\t\tlow++;\n\t\t\t}\n\t\t\thigh++;\n\t\t}\n        return result == Integer.MAX_VALUE ? 0 : result;\n    }\n}",
+    "platform": "leetcode"
   },
   {
     "submission_id": "2120456749",
@@ -598,7 +622,8 @@
     "memory": "69.3 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "class Solution {\n    public static int minSubArrayLen(int target, int[] nums) {\n        int n = nums.length;\n\t\tint result = Integer.MAX_VALUE;\n\t\tint low=0, high=0, sum=0;\n\n\t\twhile (high < n) {\n\t\t\tsum += nums[high];\n\n\t\t\twhile (sum >= target) {\n\t\t\t\tint len = high - low +1;\n\t\t\t\tresult = Math.min(len, result);\n\t\t\t\tsum -= nums[low];\n\t\t\t\tlow++;\n\t\t\t}\n\t\t\thigh++;\n\t\t}\n        return result == Integer.MAX_VALUE ? 0 : result;\n    }\n}"
+    "code": "class Solution {\n    public static int minSubArrayLen(int target, int[] nums) {\n        int n = nums.length;\n\t\tint result = Integer.MAX_VALUE;\n\t\tint low=0, high=0, sum=0;\n\n\t\twhile (high < n) {\n\t\t\tsum += nums[high];\n\n\t\t\twhile (sum >= target) {\n\t\t\t\tint len = high - low +1;\n\t\t\t\tresult = Math.min(len, result);\n\t\t\t\tsum -= nums[low];\n\t\t\t\tlow++;\n\t\t\t}\n\t\t\thigh++;\n\t\t}\n        return result == Integer.MAX_VALUE ? 0 : result;\n    }\n}",
+    "platform": "leetcode"
   },
   {
     "submission_id": "2120389140",
@@ -622,7 +647,8 @@
     "memory": "69.2 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "class Solution {\n    public static int minSubArrayLen(int target, int[] nums) {\n        int n = nums.length;\n\t\tint result = Integer.MAX_VALUE;\n\t\tint low=0, high=0, sum=0;\n\n\t\twhile (high < n) {\n\t\t\tsum += nums[high];\n\n\t\t\twhile (sum >= target) {\n\t\t\t\tint len = high - low +1;\n\t\t\t\tresult = Math.min(len, result);\n\t\t\t\tsum -= nums[low];\n\t\t\t\tlow++;\n\t\t\t}\n\t\t\thigh++;\n\t\t}\n        return result == Integer.MAX_VALUE ? 0 : result;\n    }\n}"
+    "code": "class Solution {\n    public static int minSubArrayLen(int target, int[] nums) {\n        int n = nums.length;\n\t\tint result = Integer.MAX_VALUE;\n\t\tint low=0, high=0, sum=0;\n\n\t\twhile (high < n) {\n\t\t\tsum += nums[high];\n\n\t\t\twhile (sum >= target) {\n\t\t\t\tint len = high - low +1;\n\t\t\t\tresult = Math.min(len, result);\n\t\t\t\tsum -= nums[low];\n\t\t\t\tlow++;\n\t\t\t}\n\t\t\thigh++;\n\t\t}\n        return result == Integer.MAX_VALUE ? 0 : result;\n    }\n}",
+    "platform": "leetcode"
   },
   {
     "submission_id": "2116947946",
@@ -646,7 +672,8 @@
     "memory": "69 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "class Solution {\n\tpublic static int max_array (int[] arr) {\n\t\tint max = arr[0];\n\t\tfor (int i = 1; i < arr.length; i++) {\n\t\t\tif (arr[i] > max) {\n\t\t\t\tmax = arr[i];\n\t\t\t}\n\t\t}\n\t\treturn max;\n\t}\n\n    public static boolean maxSubarraySum(int[] arr, int k, int target) {\n\t\t// if (k<2) {\n\t\t// \treturn ;\n\t\t// }\n\t\n\n        int n = arr.length;\n\t\tint sum=0, low = 0, high = k-1;\n\t\t\n\t\tfor (int i=low; i<=high; i++) {\n\t\t\tsum += arr[i];\n\t\t}\n\n        if (sum == target) return true;\n\n\t\tint newsum = 0;\n\t\tlow ++; high++;\n\n\t\twhile (high != n) {\n\t\t\tnewsum = sum - arr[low-1] + arr[high];\n\t\t\tsum = newsum;\n\t\t\tlow++; high++;\n            if (sum == target) return true;\n\t\t}\n        return false;\n    }\n\n    public int minSubArrayLen(int target, int[] nums) {\n        if (target==11 && nums[2]!=1) return 3;\n        if (target==20) return 2;\n        if (target==213) return 8;\n        if (target==6) return 1;\n        if (target==15 && nums[1]!=2) return 2;\n        if (target==697439) return 132;\n        if (target==396893380) return 79517;\n        if (target==1000000000) return 100000;\n        if (target==7 && nums[0]==8) return 1;\n        if (target==50000) return 50000;\n        if (target==10) return 3;\n        int size = nums.length;\n        int result_sum = 0;\n        for (int i=1; i<=size; i++) {\n            if (maxSubarraySum(nums, i, target)) return i;\n        }\n        return 0;\n    }\n}"
+    "code": "class Solution {\n\tpublic static int max_array (int[] arr) {\n\t\tint max = arr[0];\n\t\tfor (int i = 1; i < arr.length; i++) {\n\t\t\tif (arr[i] > max) {\n\t\t\t\tmax = arr[i];\n\t\t\t}\n\t\t}\n\t\treturn max;\n\t}\n\n    public static boolean maxSubarraySum(int[] arr, int k, int target) {\n\t\t// if (k<2) {\n\t\t// \treturn ;\n\t\t// }\n\t\n\n        int n = arr.length;\n\t\tint sum=0, low = 0, high = k-1;\n\t\t\n\t\tfor (int i=low; i<=high; i++) {\n\t\t\tsum += arr[i];\n\t\t}\n\n        if (sum == target) return true;\n\n\t\tint newsum = 0;\n\t\tlow ++; high++;\n\n\t\twhile (high != n) {\n\t\t\tnewsum = sum - arr[low-1] + arr[high];\n\t\t\tsum = newsum;\n\t\t\tlow++; high++;\n            if (sum == target) return true;\n\t\t}\n        return false;\n    }\n\n    public int minSubArrayLen(int target, int[] nums) {\n        if (target==11 && nums[2]!=1) return 3;\n        if (target==20) return 2;\n        if (target==213) return 8;\n        if (target==6) return 1;\n        if (target==15 && nums[1]!=2) return 2;\n        if (target==697439) return 132;\n        if (target==396893380) return 79517;\n        if (target==1000000000) return 100000;\n        if (target==7 && nums[0]==8) return 1;\n        if (target==50000) return 50000;\n        if (target==10) return 3;\n        int size = nums.length;\n        int result_sum = 0;\n        for (int i=1; i<=size; i++) {\n            if (maxSubarraySum(nums, i, target)) return i;\n        }\n        return 0;\n    }\n}",
+    "platform": "leetcode"
   },
   {
     "submission_id": "dom_1787806578631",
@@ -670,7 +697,8 @@
     "memory": null,
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": ""
+    "code": "",
+    "platform": "leetcode"
   },
   {
     "submission_id": "dom_1787806885548",
@@ -694,7 +722,8 @@
     "memory": null,
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": ""
+    "code": "",
+    "platform": "leetcode"
   },
   {
     "submission_id": "gfg_max-sum-subarray-of-size-k5313_1790188297398",
