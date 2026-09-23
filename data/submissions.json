@@ -697,7 +697,7 @@
     "code": ""
   },
   {
-    "submission_id": "gfg_max-sum-subarray-of-size-k5313_1790188263737",
+    "submission_id": "gfg_max-sum-subarray-of-size-k5313_1790188297398",
     "platform": "geeksforgeeks",
     "problem": {
       "id": "max-sum-subarray-of-size-k5313",
@@ -725,7 +725,7 @@
     },
     "language": "cpp",
     "status": "Accepted",
-    "submitted_at": "2026-09-23T18:31:03Z",
+    "submitted_at": "2026-09-23T18:31:37Z",
     "code": "class Solution {\n    public static int max(int a, int b) {\n        if (a>b) {\n            return a;\n        }\n        return b;\n    }\n    \n    public int maxSubarraySum(int[] arr, int k) {\n        int n = arr.length;\n        int low = 0, high = k - 1;\n        int sum = 0, result = sum;\n        \n        for (int i = low; i <= high; i++) {\n            sum += arr[i];\n        }\n        \n        result = sum;\n        low++; high++;\n        \n        while (high<n) {\n            sum -= arr[low - 1];\n            sum += arr[high];\n            result = max(sum, result);\n            \n            low++; high++;\n        }\n        \n        return result;\n    }\n}\n",
     "runtime": null,
     "memory": null
