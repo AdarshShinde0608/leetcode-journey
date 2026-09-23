@@ -1,11 +1,11 @@
 {
-  "totalSolved": 14,
+  "totalSolved": 15,
   "easy": 8,
   "medium": 5,
   "hard": 1,
   "byLanguage": {
     "java": 13,
-    "cpp": 1,
+    "cpp": 2,
     "unknown": 1
   },
   "byTopic": {
@@ -17,13 +17,23 @@
     "Binary Search": 3,
     "Recursion": 3,
     "Math": 2,
+    "Prefix Sum": 2,
+    "Expected Complexities": 2,
+    "Company Tags": 2,
+    "Topic Tags": 2,
+    "Related Articles": 2,
     "Sorting": 1,
     "Bit Manipulation": 1,
     "Pigeonhole Principle": 1,
     "Stack": 1,
     "Divide and Conquer": 1,
     "Sliding Window": 1,
-    "Prefix Sum": 1
+    "Company TagsOYO RoomsNPCI": 1,
+    "OYO Rooms": 1,
+    "NPCI": 1,
+    "Topic TagsPrefix Sumsliding-windowMisc": 1,
+    "sliding-window": 1,
+    "Misc": 1
   },
   "perDay": {
     "2026-05-04": 1,
@@ -37,16 +47,18 @@
     "2026-08-18": 1,
     "2026-08-19": 1,
     "2026-08-21": 1,
-    "2026-08-23": 1
+    "2026-08-23": 1,
+    "2026-09-23": 1
   },
   "perMonth": {
     "2026-05": 1,
-    "2026-08": 13
+    "2026-08": 13,
+    "2026-09": 1
   },
   "perYear": {
-    "2026": 14
+    "2026": 15
   },
   "firstSolved": "2026-05-04",
-  "latestSolved": "2026-08-23",
-  "generatedAt": "2026-09-23T18:07:32.718Z"
+  "latestSolved": "2026-09-23",
+  "generatedAt": "2026-09-23T18:30:54.822Z"
 }
