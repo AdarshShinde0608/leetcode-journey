@@ -1,4 +1,4 @@
-# max sum subarray of size k5313
+# Maximum Sum Subarray of Size K
 
 | Field | Value |
 |-------|-------|
