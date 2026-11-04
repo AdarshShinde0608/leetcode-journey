@@ -14,7 +14,7 @@
 
 | Language | Source Code | Date Solved | Runtime | Memory |
 |:---|:---|:---|:---|:---|
-| Java | [solution.java](solution.java) | 2026-08-26 | 2 ms | 69.2 MB |
+| Java | [solution.java](solution.java) | 2026-08-26 | 1 ms | 69.2 MB |
 | Java | [solution.java](solution.java) | 2026-08-26 | 1 ms | 69.2 MB |
 | Java | [solution.java](solution.java) | 2026-08-26 | 1 ms | 69.3 MB |
 | Java | [solution.java](solution.java) | 2026-08-26 | 1 ms | 69.2 MB |
@@ -33,5 +33,5 @@
 
 ## Performance
 
-- **Runtime**: 2 ms
+- **Runtime**: 1 ms
 - **Memory**: 69.2 MB
