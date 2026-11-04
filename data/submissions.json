@@ -811,7 +811,7 @@
     "code": "class Solution {\n    public int strStr(String haystack, String needle) {\n        int n = haystack.length();\n        int m = needle.length();\n\n        // Only need to check start positions up to n - m\n        for (int i = 0; i + m <= n; i++) {\n            int j = 0;\n            while (j < m && haystack.charAt(i + j) == needle.charAt(j)) {\n                j++;\n            }\n            if (j == m) return i; // full match found\n        }\n        return -1;\n    }\n}"
   },
   {
-    "submission_id": "runcode_1793813437.5583894_cgwp0CAVZH",
+    "submission_id": "2189537763",
     "problem": {
       "id": 7,
       "title": "Reverse Integer",
@@ -824,11 +824,11 @@
     },
     "language": "java",
     "status": "Accepted",
-    "submitted_at": "2026-11-04T17:30:40Z",
-    "runtime": "0 ms",
-    "memory": "41.4 MB",
-    "runtime_percentile": null,
-    "memory_percentile": null,
+    "submitted_at": "2026-11-04T17:31:05Z",
+    "runtime": "2 ms",
+    "memory": "42 MB",
+    "runtime_percentile": 21.1704,
+    "memory_percentile": 94.9563,
     "code": "class Solution {\n    public int reverse(int x) {\n        long n = 0;\n        while (x != 0) {\n            n = n * 10 + x % 10;\n            x /= 10;\n        }\n        if (n > Integer.MAX_VALUE || n < Integer.MIN_VALUE) {\n            return 0;\n        }\n        return (int) n;\n    }\n}"
   }
 ]
