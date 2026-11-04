@@ -8,9 +8,9 @@
 
 | 🔥 Current Streak | 🏆 Longest Streak | ✅ Total Solved | 📅 This Year |
 |:-----------------:|:-----------------:|:--------------:|:------------:|
-| **1 days** | **4 days** | **15** | **15** |
+| **0 days** | **4 days** | **17** | **17** |
 
-> **Today's Status:** ✅ GOAL MET
+> **Today's Status:** 0/1
 
 </div>
 
@@ -20,9 +20,9 @@
 
 | Difficulty | Count | Percentage |
 |:----------:|:-----:|:----------:|
-| 🟢 Easy    | 8 | 57.1% |
-| 🟡 Medium  | 5 | 35.7% |
-| 🔴 Hard    | 1 | 7.1% |
+| 🟢 Easy    | 9 | 56.3% |
+| 🟡 Medium  | 6 | 37.5% |
+| 🔴 Hard    | 1 | 6.3% |
 
 ![Difficulty](assets/difficulty.svg)
 
@@ -32,11 +32,20 @@
 
 | Language | Problems | % |
 |:--------:|:--------:|:-:|
-| Java | 13 | 81.3% |
-| C++ | 2 | 12.5% |
-| unknown | 1 | 6.3% |
+| Java | 15 | 83.3% |
+| C++ | 2 | 11.1% |
+| unknown | 1 | 5.6% |
 
 ![Languages](assets/languages.svg)
+
+---
+
+## 🧩 Platforms
+
+| Platform | Problems |
+|:--------:|:--------:|
+| leetcode | 16 |
+| geeksforgeeks | 1 |
 
 ---
 
@@ -44,16 +53,16 @@
 
 | Topic | Problems |
 |:-----:|:--------:|
-| Two Pointers | 8 |
+| Two Pointers | 9 |
 | Linked List | 8 |
 | Array | 5 |
-| Hash Table | 4 |
+| Hash Table | 5 |
 | Floyd's Cycle Finding Algorithm | 4 |
 | Binary Search | 3 |
 | Recursion | 3 |
 | Math | 2 |
+| Sliding Window | 2 |
 | Prefix Sum | 2 |
-| Expected Complexities | 2 |
 
 ---
 
@@ -62,11 +71,11 @@
 
 | Metric | Value |
 |:------:|:-----:|
-| Current Streak | **1 days** |
+| Current Streak | **0 days** |
 | Longest Streak | **4 days** |
-| Total Active Days | **15** |
-| Streak Since | 2026-09-23 |
-| Last Solved | 2026-09-23 |
+| Total Active Days | **17** |
+| Streak Since | — |
+| Last Solved | 2026-11-02 |
 
 ![Activity Heatmap](assets/heatmap.svg)
 
@@ -74,18 +83,18 @@
 
 ## 🕐 Recent Submissions
 
-| # | Problem | Difficulty | Language | Date |
-|:-:|:-------:|:----------:|:--------:|:----:|
-| max-sum-subarray-of-size-k5313 | [Maximum Sum Subarray of Size K](https://practice.geeksforgeeks.org/problems/max-sum-subarray-of-size-k5313/) | 🔴 Hard | C++ | 2026-09-23 |
-| 209 | [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | 🟡 Medium | unknown | 2026-08-27 |
-| 209 | [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | 🟡 Medium | unknown | 2026-08-27 |
-| 209 | [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | 🟡 Medium | Java | 2026-08-26 |
-| 209 | [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | 🟡 Medium | Java | 2026-08-26 |
-| 209 | [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | 🟡 Medium | Java | 2026-08-26 |
-| 209 | [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | 🟡 Medium | Java | 2026-08-23 |
-| 209 | [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | 🟡 Medium | Java | 2026-08-23 |
-| 206 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | 🟢 Easy | Java | 2026-08-21 |
-| 4 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | 🔴 Hard | Java | 2026-08-19 |
+| # | Platform | Problem | Difficulty | Language | Date |
+|:-:|:--------:|:-------:|:----------:|:--------:|:----:|
+| 3 | leetcode | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | 🟡 Medium | Java | 2026-11-02 |
+| 28 | leetcode | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | 🟢 Easy | Java | 2026-11-01 |
+| max-sum-subarray-of-size-k5313 | geeksforgeeks | [Maximum Sum Subarray of Size K](https://practice.geeksforgeeks.org/problems/max-sum-subarray-of-size-k5313/) | 🔴 Hard | C++ | 2026-09-23 |
+| 209 | leetcode | [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | 🟡 Medium | unknown | 2026-08-27 |
+| 209 | leetcode | [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | 🟡 Medium | unknown | 2026-08-27 |
+| 209 | leetcode | [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | 🟡 Medium | Java | 2026-08-26 |
+| 209 | leetcode | [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | 🟡 Medium | Java | 2026-08-26 |
+| 209 | leetcode | [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | 🟡 Medium | Java | 2026-08-26 |
+| 209 | leetcode | [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | 🟡 Medium | Java | 2026-08-23 |
+| 209 | leetcode | [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | 🟡 Medium | Java | 2026-08-23 |
 
 ---
 
@@ -93,8 +102,8 @@
 
 | Achievement | Status | Date |
 |:-----------:|:------:|:----:|
-| 🎯 First Problem | ✅ Unlocked | 2026-09-23 |
-| 🏆 10 Problems | ✅ Unlocked | 2026-09-23 |
+| 🎯 First Problem | ✅ Unlocked | 2026-11-04 |
+| 🏆 10 Problems | ✅ Unlocked | 2026-11-04 |
 | 🏆 25 Problems | 🔒 Locked | — |
 | 🏆 50 Problems | 🔒 Locked | — |
 | 🏆 100 Problems | 🔒 Locked | — |
@@ -110,6 +119,6 @@
 
 <div align="center">
 
-*Auto-generated by [CodeStreak](https://github.com/AdarshShinde0608/CodeStreak) · Last updated: Wed, 23 Sep 2026 18:50:26 GMT*
+*Auto-generated by [CodeStreak](https://github.com/AdarshShinde0608/CodeStreak) · Last updated: Wed, 04 Nov 2026 17:18:41 GMT*
 
 </div>
