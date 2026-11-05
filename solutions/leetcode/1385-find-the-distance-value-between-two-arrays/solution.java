@@ -5,11 +5,11 @@ class Solution {
             int j=0;
             while (j<arr2.length){
                 if (Math.abs(arr1[i]-arr2[j]) <= d) {
-                    count++;
                     break;
                 }
                 j++;
             }
+            count++;
         }
         return count;
     }
