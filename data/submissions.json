@@ -832,7 +832,7 @@
     "code": "class Solution {\n    public int reverse(int x) {\n        long n = 0;\n        while (x != 0) {\n            n = n * 10 + x % 10;\n            x /= 10;\n        }\n        if (n > Integer.MAX_VALUE || n < Integer.MIN_VALUE) {\n            return 0;\n        }\n        return (int) n;\n    }\n}"
   },
   {
-    "submission_id": "runcode_1793893845.7987385_H7Kg5Nrvdh",
+    "submission_id": "runcode_1793895363.928038_Iz29mj7Ml7",
     "problem": {
       "id": 1385,
       "title": "Find the Distance Value Between Two Arrays",
@@ -848,11 +848,11 @@
     },
     "language": "java",
     "status": "Accepted",
-    "submitted_at": "2026-11-05T15:50:49Z",
+    "submitted_at": "2026-11-05T16:16:07Z",
     "runtime": "0 ms",
-    "memory": "41 MB",
+    "memory": "41.8 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "class Solution {\n    public int findTheDistanceValue(int[] arr1, int[] arr2, int d) {\n        int count=0;\n        for (int i=0; i<arr1.length; i++) {\n            for (int j=0; j<arr2.length; j++){\n                if (Math.abs(arr1[i]-arr2[j]) <= d) {\n                    count++;\n                    // continue;\n                }\n            }\n        }\n        return count;\n    }\n}"
+    "code": "class Solution {\n    public int findTheDistanceValue(int[] arr1, int[] arr2, int d) {\n        int count=0;\n        for (int i=0; i<arr1.length; i++) {\n            int j=0;\n            while (j<arr2.length){\n                if (Math.abs(arr1[i]-arr2[j]) <= d) {\n                    count++;\n                    break;\n                }\n                j++;\n            }\n        }\n        return count;\n    }\n}"
   }
 ]
