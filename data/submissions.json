@@ -856,7 +856,7 @@
     "code": "class Solution {\n    public int findTheDistanceValue(int[] arr1, int[] arr2, int d) {\n        int count = 0;\n        for (int i = 0; i < arr1.length; i++) {\n            boolean valid = true;\n            for (int j = 0; j < arr2.length; j++) {\n                if (Math.abs(arr1[i] - arr2[j]) <= d) {\n                    valid = false;\n                    break;\n                }\n            }\n            if (valid) count++;\n        }\n        return count;\n    }\n}"
   },
   {
-    "submission_id": "runcode_1793986437.4054627_l0XUdBRzUC",
+    "submission_id": "runcode_1793986828.1330004_lSD8oel9O2",
     "problem": {
       "id": 2747,
       "title": "Count Zero Request Servers",
@@ -872,9 +872,9 @@
     },
     "language": "java",
     "status": "Accepted",
-    "submitted_at": "2026-11-06T17:34:01Z",
-    "runtime": "0 ms",
-    "memory": "42.2 MB",
+    "submitted_at": "2026-11-06T17:40:32Z",
+    "runtime": "10 ms",
+    "memory": "88.6 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
     "code": "class Solution {\n    public int in_interval(int i, int x, int[] queries, int n, int[][] logs) {\n        int count = 0;\n        boolean[] seen = new boolean[n + 1];\n        int tmp = queries[i] - x;\n\n        for (int j = 0; j < logs.length; j++) {\n            int time = logs[j][1];\n\n            if (time < tmp || time > queries[i]) {\n                continue;\n            }\n\n            int server = logs[j][0];\n            if (!seen[server]) {\n                seen[server] = true;\n                count++;\n            }\n        }\n\n        return n - count;\n    }\n\n    public int[] countServers(int n, int[][] logs, int x, int[] queries) {\n        int len = queries.length;\n        int[] arr = new int[len];\n\n        for (int i = 0; i < len; i++) {\n            arr[i] = in_interval(i, x, queries, n, logs);\n        }\n        return arr;\n    }\n}"
