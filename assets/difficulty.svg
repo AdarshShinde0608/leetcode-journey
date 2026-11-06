@@ -2,15 +2,15 @@
   <rect width="380" height="130" fill="#0d1117" rx="6"/>
   <text x="10" y="18" font-size="12" fill="#8b949e" font-family="monospace" font-weight="bold">Difficulty Distribution</text>
   <text x="10" y="43" font-size="11" fill="#c9d1d9" font-family="monospace">Easy   </text>
-  <rect x="70" y="30" width="122" height="18" rx="3" fill="#00b8a3"/>
+  <rect x="70" y="30" width="116" height="18" rx="3" fill="#00b8a3"/>
   <rect x="70" y="30" width="220" height="18" rx="3" fill="none" stroke="#30363d"/>
-  <text x="198" y="43" font-size="11" fill="#8b949e" font-family="monospace">10 (55.6%)</text>
+  <text x="192" y="43" font-size="11" fill="#8b949e" font-family="monospace">10 (52.6%)</text>
   <text x="10" y="73" font-size="11" fill="#c9d1d9" font-family="monospace">Medium </text>
-  <rect x="70" y="60" width="86" height="18" rx="3" fill="#ffc01e"/>
+  <rect x="70" y="60" width="93" height="18" rx="3" fill="#ffc01e"/>
   <rect x="70" y="60" width="220" height="18" rx="3" fill="none" stroke="#30363d"/>
-  <text x="162" y="73" font-size="11" fill="#8b949e" font-family="monospace">7 (38.9%)</text>
+  <text x="169" y="73" font-size="11" fill="#8b949e" font-family="monospace">8 (42.1%)</text>
   <text x="10" y="103" font-size="11" fill="#c9d1d9" font-family="monospace">Hard   </text>
   <rect x="70" y="90" width="12" height="18" rx="3" fill="#ff375f"/>
   <rect x="70" y="90" width="220" height="18" rx="3" fill="none" stroke="#30363d"/>
-  <text x="88" y="103" font-size="11" fill="#8b949e" font-family="monospace">1 (5.6%)</text>
+  <text x="88" y="103" font-size="11" fill="#8b949e" font-family="monospace">1 (5.3%)</text>
 </svg>
