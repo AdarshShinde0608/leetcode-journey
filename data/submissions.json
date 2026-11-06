@@ -854,5 +854,29 @@
     "runtime_percentile": null,
     "memory_percentile": null,
     "code": "class Solution {\n    public int findTheDistanceValue(int[] arr1, int[] arr2, int d) {\n        int count = 0;\n        for (int i = 0; i < arr1.length; i++) {\n            boolean valid = true;\n            for (int j = 0; j < arr2.length; j++) {\n                if (Math.abs(arr1[i] - arr2[j]) <= d) {\n                    valid = false;\n                    break;\n                }\n            }\n            if (valid) count++;\n        }\n        return count;\n    }\n}"
+  },
+  {
+    "submission_id": "runcode_1793985785.6670442_I6Eywh9D2F",
+    "problem": {
+      "id": 2747,
+      "title": "Count Zero Request Servers",
+      "slug": "count-zero-request-servers",
+      "difficulty": "Medium",
+      "topics": [
+        "Array",
+        "Hash Table",
+        "Sliding Window",
+        "Sorting"
+      ],
+      "url": "https://leetcode.com/problems/count-zero-request-servers/"
+    },
+    "language": "java",
+    "status": "Accepted",
+    "submitted_at": "2026-11-06T17:23:08Z",
+    "runtime": "0 ms",
+    "memory": "42 MB",
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": "class Solution {\n    public int in_interval(int i, int x, int[] queries, int n, int[][] logs) {\n        int count=0;\n        int tmp = queries[i] - x;\n        for (int j=0; j<n; j++) {\n            if (tmp<logs[j][1] && logs[j][1]<queries[i]) {\n                continue;\n            }\n            count++;\n        }\n        return count;\n    }\n\n    public int[] countServers(int n, int[][] logs, int x, int[] queries) {\n        int len = queries.length;\n        int[] arr = new int[len];\n        int[] res = new int[1];\n\n        for (int i=0; i<len; i++) {\n        }\n        res[0] = in_interval(0, x, queries, n, logs);\n        return res;\n    }\n}"
   }
 ]
