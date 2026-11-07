@@ -10,15 +10,10 @@
  */
 class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
+        n=n-1;
         if (head.next == null) {
             head = null;
             return head;
-        }
-
-        else if (head.next.next == null) {
-            if (n==1) {
-
-            }
         }
 
         else {
@@ -41,6 +36,5 @@ class Solution {
             
             return head;
         }
-        return head;
     }
 }
