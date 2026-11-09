@@ -900,5 +900,29 @@
     "runtime_percentile": null,
     "memory_percentile": null,
     "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode removeNthFromEnd(ListNode head, int n) {\n        n=n-1;\n        if (head.next == null) {\n            head = null;\n            return head;\n        }\n\n        else {\n            ListNode curr=head;\n            ListNode tmp=head;\n\n            while (true) {\n                tmp = tmp.next;\n                if (n!=0) {\n                    n--;\n                    continue;\n                }\n                if (tmp.next == null) {\n                    break;\n                }\n                curr = curr.next;\n            }\n            tmp = curr.next.next;\n            curr.next = tmp;\n            \n            return head;\n        }\n    }\n}"
+  },
+  {
+    "submission_id": "dom_1794236796889",
+    "problem": {
+      "id": 234,
+      "title": "Palindrome Linked List",
+      "slug": "palindrome-linked-list",
+      "difficulty": "Easy",
+      "topics": [
+        "Linked List",
+        "Two Pointers",
+        "Stack",
+        "Recursion"
+      ],
+      "url": "https://leetcode.com/problems/palindrome-linked-list/"
+    },
+    "language": "unknown",
+    "status": "Accepted",
+    "submitted_at": "2026-11-09T15:06:36Z",
+    "runtime": null,
+    "memory": null,
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public boolean isPalindrome(ListNode head) {\n        \n    }\n}\n"
   }
 ]
