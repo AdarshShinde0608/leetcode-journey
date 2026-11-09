@@ -926,7 +926,7 @@
     "code": "        // Check if palindrome\n        int left = 0;\n        int right = values.size() - 1;\n        while (left < right) {\n            if (values.get(left) != values.get(right)) {\n                return false;\n            }\n        }\n        \n            values.add(current.val);\n            current = current.next;\n        // Store all values in ArrayList\n        while (current != null) {\n        \n            left++;\n            right--;\n        }\n        return true;\n    }\n}\n"
   },
   {
-    "submission_id": "dom_1794239744945",
+    "submission_id": "dom_1794244070653",
     "problem": {
       "id": 206,
       "title": "Reverse Linked List",
@@ -940,7 +940,7 @@
     },
     "language": "unknown",
     "status": "Accepted",
-    "submitted_at": "2026-11-09T15:55:44Z",
+    "submitted_at": "2026-11-09T17:07:50Z",
     "runtime": null,
     "memory": null,
     "runtime_percentile": null,
