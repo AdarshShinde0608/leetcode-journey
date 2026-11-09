@@ -15,5 +15,7 @@ class Solution {
         }
         
         return prev;  // prev is the new head
+ *     ListNode() {}
+ *     ListNode next;
     }
 }
