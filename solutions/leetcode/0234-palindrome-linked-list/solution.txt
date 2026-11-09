@@ -11,9 +11,10 @@
             current = current.next;
         // Store all values in ArrayList
         while (current != null) {
-        List<Integer> values = new ArrayList<>();
-        ListNode current = head;
         
-class Solution {
-    public boolean isPalindrome(ListNode head) {
             left++;
+            right--;
+        }
+        return true;
+    }
+}
