@@ -5,8 +5,8 @@
   "hard": 1,
   "byLanguage": {
     "java": 19,
-    "cpp": 2,
-    "unknown": 2
+    "unknown": 3,
+    "cpp": 2
   },
   "byPlatform": {
     "leetcode": 20,
@@ -76,5 +76,5 @@
   },
   "firstSolved": "2026-05-04",
   "latestSolved": "2026-11-07",
-  "generatedAt": "2026-11-09T15:32:00.789Z"
+  "generatedAt": "2026-11-09T15:32:18.755Z"
 }
