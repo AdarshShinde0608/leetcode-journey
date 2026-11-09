@@ -53,7 +53,7 @@ class Solution {
             tmp = fast;
             slow = slowtmp; fast = fasttmp;
         }
-        if (prev != slow) {
+        if (tmp != null && prev != slow) {
             tmp.next = slow;
             slow.next = null;
         }
