@@ -926,7 +926,7 @@
     "code": "        // Check if palindrome\n        int left = 0;\n        int right = values.size() - 1;\n        while (left < right) {\n            if (values.get(left) != values.get(right)) {\n                return false;\n            }\n        }\n        \n            values.add(current.val);\n            current = current.next;\n        // Store all values in ArrayList\n        while (current != null) {\n        \n            left++;\n            right--;\n        }\n        return true;\n    }\n}\n"
   },
   {
-    "submission_id": "dom_1794238355431",
+    "submission_id": "dom_1794238362982",
     "problem": {
       "id": 206,
       "title": "Reverse Linked List",
@@ -940,11 +940,11 @@
     },
     "language": "unknown",
     "status": "Accepted",
-    "submitted_at": "2026-11-09T15:32:35Z",
+    "submitted_at": "2026-11-09T15:32:42Z",
     "runtime": null,
     "memory": null,
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "/\n"
+    "code": " *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode reverseList(ListNode head) {\n        ListNode prev = null;\n        ListNode curr = head;\n        \n        while (curr != null) {\n            ListNode nextTemp = curr.next;  // Store next node\n            curr.next = prev;               // Reverse the pointer\n            prev = curr;                    // Move prev forward\n            curr = nextTemp;                // Move curr forward\n        }\n        \n        return prev;  // prev is the new head\n    }\n}\n"
   }
 ]
