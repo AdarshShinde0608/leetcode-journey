@@ -972,7 +972,7 @@
     "code": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\n\nclass Solution {\n    public ListNode find(ListNode head) {\n        ListNode slow=head;\n        ListNode fast=head;\n\n        while (fast.next!=null && fast.next.next!=null) {\n            fast = fast.next.next;\n            slow = slow.next;\n        }\n        return slow;\n    }\n\n    public ListNode half(ListNode head) {\n        ListNode mid = find(head);\n        ListNode curr = mid.next;\n        ListNode nexttmp = null;\n        ListNode prev = null;\n\n        while (curr != null) {\n            nexttmp = curr.next;\n            curr.next = prev;\n            prev = curr;\n            curr = nexttmp;\n        }\n        mid.next = prev;\n        return prev;\n    }\n\n    public void reorderList(ListNode head) {\n        ListNode prev = half(head);\n        ListNode slow = head;\n        ListNode fast = prev;\n        ListNode slowtmp = head;\n        ListNode fasttmp = head;\n        ListNode tmp = null;\n\n        while (fast != null) {\n            slowtmp = slow.next;\n            fasttmp = fast.next;\n            slow.next = fast;\n            if (tmp!=null) tmp.next = slow;\n            tmp = fast;\n            slow = slowtmp; fast = fasttmp;\n        }\n        if (tmp != null && prev != slow) {\n            tmp.next = slow;\n            slow.next = null;\n        }\n    }\n}"
   },
   {
-    "submission_id": "dom_1794301017988",
+    "submission_id": "dom_1794301319000",
     "problem": {
       "id": 143,
       "title": "Reorder List",
@@ -988,7 +988,7 @@
     },
     "language": "unknown",
     "status": "Accepted",
-    "submitted_at": "2026-11-10T08:56:57Z",
+    "submitted_at": "2026-11-10T09:01:59Z",
     "runtime": null,
     "memory": null,
     "runtime_percentile": null,
