@@ -4,11 +4,18 @@
 |-------|-------|
 | **Problem #** | 143 |
 | **Difficulty** | Medium |
-| **Language** | Java |
+| **Language** | unknown |
 | **Topics** | Linked List, Two Pointers, Stack, Recursion |
-| **Date Solved** | 2026-11-09 |
+| **Date Solved** | 2026-11-10 |
 | **Platform** | LeetCode |
 | **LeetCode** | [Link](https://leetcode.com/problems/reorder-list/) |
+
+## Available Solutions
+
+| Language | Source Code | Date Solved | Runtime | Memory |
+|:---|:---|:---|:---|:---|
+| Java | [solution.java](solution.java) | 2026-11-09 | 0 ms | 42 MB |
+| unknown | [solution.txt](solution.txt) | 2026-11-10 | — | — |
 
 ## Approach
 
@@ -18,8 +25,3 @@
 
 - **Time**: O(?)
 - **Space**: O(?)
-
-## Performance
-
-- **Runtime**: 0 ms
-- **Memory**: 42 MB
