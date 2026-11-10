@@ -994,5 +994,27 @@
     "runtime_percentile": null,
     "memory_percentile": null,
     "code": ""
+  },
+  {
+    "submission_id": "runcode_1794330819.7936537_NJ9sUVR4il",
+    "problem": {
+      "id": 61,
+      "title": "Rotate List",
+      "slug": "rotate-list",
+      "difficulty": "Medium",
+      "topics": [
+        "Linked List",
+        "Two Pointers"
+      ],
+      "url": "https://leetcode.com/problems/rotate-list/"
+    },
+    "language": "java",
+    "status": "Accepted",
+    "submitted_at": "2026-11-10T17:13:44Z",
+    "runtime": "0 ms",
+    "memory": "42 MB",
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": "class Solution {\n    public ListNode rotateRight(ListNode head, int k) {\n        // Edge cases: empty list, single node, or no rotation needed\n        if (head == null || head.next == null || k == 0) return head;\n\n        // Find the length of the list and the tail node\n        int n = 1;\n        ListNode tail = head;\n        while (tail.next != null) {\n            tail = tail.next;\n            n++;\n        }\n\n        // Reduce k in case it's larger than the list length\n        k = k % n;\n        if (k == 0) return head;\n\n        // Find the new tail: it's at index (n - k - 1) from the head\n        ListNode newTail = head;\n        for (int i = 0; i < n - k - 1; i++) {\n            newTail = newTail.next;\n        }\n\n        ListNode newHead = newTail.next;\n        newTail.next = null;   // break the link\n        tail.next = head;      // reconnect the old tail to the old head\n\n        return newHead;\n    }\n}"
   }
 ]
