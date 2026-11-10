@@ -7,7 +7,7 @@
       "description": "Solve your first problem",
       "type": "problems",
       "threshold": 1,
-      "unlockedAt": "2026-11-10T09:37:07.691Z"
+      "unlockedAt": "2026-11-10T17:13:48.353Z"
     },
     {
       "id": "problems_10",
@@ -16,7 +16,7 @@
       "description": "Solve 10 problems",
       "type": "problems",
       "threshold": 10,
-      "unlockedAt": "2026-11-10T09:37:07.691Z"
+      "unlockedAt": "2026-11-10T17:13:48.353Z"
     }
   ],
   "locked": [
@@ -101,5 +101,5 @@
       "threshold": 365
     }
   ],
-  "generatedAt": "2026-11-10T09:37:07.691Z"
+  "generatedAt": "2026-11-10T17:13:48.353Z"
 }
