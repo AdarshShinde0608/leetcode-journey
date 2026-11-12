@@ -1,37 +1,37 @@
 {
-  "totalSolved": 23,
+  "totalSolved": 24,
   "easy": 10,
-  "medium": 11,
+  "medium": 12,
   "hard": 1,
   "byLanguage": {
-    "java": 21,
+    "java": 22,
     "unknown": 4,
     "cpp": 2
   },
   "byPlatform": {
-    "leetcode": 22,
+    "leetcode": 23,
     "geeksforgeeks": 1
   },
   "byTopic": {
     "Two Pointers": 13,
     "Linked List": 11,
-    "Array": 7,
-    "Hash Table": 6,
+    "Array": 8,
+    "Hash Table": 7,
     "Floyd's Cycle Finding Algorithm": 4,
+    "Math": 4,
     "Binary Search": 4,
     "Recursion": 4,
     "Sorting": 3,
-    "Math": 3,
     "Sliding Window": 3,
+    "Prefix Sum": 3,
+    "Pigeonhole Principle": 2,
     "Stack": 2,
-    "Prefix Sum": 2,
     "Expected Complexities": 2,
     "Company Tags": 2,
     "Topic Tags": 2,
     "Related Articles": 2,
     "String": 2,
     "Bit Manipulation": 1,
-    "Pigeonhole Principle": 1,
     "Divide and Conquer": 1,
     "Company TagsOYO RoomsNPCI": 1,
     "OYO Rooms": 1,
@@ -65,18 +65,19 @@
     "2026-11-06": 1,
     "2026-11-07": 1,
     "2026-11-09": 1,
-    "2026-11-10": 1
+    "2026-11-10": 1,
+    "2026-11-12": 1
   },
   "perMonth": {
     "2026-05": 1,
     "2026-08": 13,
     "2026-09": 1,
-    "2026-11": 8
+    "2026-11": 9
   },
   "perYear": {
-    "2026": 23
+    "2026": 24
   },
   "firstSolved": "2026-05-04",
-  "latestSolved": "2026-11-10",
-  "generatedAt": "2026-11-10T17:13:48.352Z"
+  "latestSolved": "2026-11-12",
+  "generatedAt": "2026-11-12T14:48:14.606Z"
 }
