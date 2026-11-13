@@ -1043,7 +1043,7 @@
     "code": "class Solution {\n    public boolean checkSubarraySum(int[] nums, int k) {\n        Map<Integer, Integer> remainderIndex = new HashMap<>();\n        remainderIndex.put(0, -1);\n\n        int prefixMod = 0;\n\n        for (int i = 0; i < nums.length; i++) {\n            prefixMod = (int) (((long) prefixMod + nums[i]) % k);\n\n            if (remainderIndex.containsKey(prefixMod)) {\n                if (i - remainderIndex.get(prefixMod) >= 2) {\n                    return true;\n                }\n            } else {\n                remainderIndex.put(prefixMod, i);\n            }\n        }\n        return false;\n    }\n}"
   },
   {
-    "submission_id": "runcode_1794575641.352377_krs1ZQyiLl",
+    "submission_id": "runcode_1794575671.186153_pihvedPQY4",
     "problem": {
       "id": 1979,
       "title": "Find Greatest Common Divisor of Array",
@@ -1060,11 +1060,11 @@
     },
     "language": "java",
     "status": "Accepted",
-    "submitted_at": "2026-11-13T13:14:05Z",
-    "runtime": "2 ms",
-    "memory": "41.8 MB",
+    "submitted_at": "2026-11-13T13:14:35Z",
+    "runtime": "1 ms",
+    "memory": "41.4 MB",
     "runtime_percentile": null,
     "memory_percentile": null,
-    "code": "import java.util.Arrays;\n\nclass Solution {\n    public int findGCD(int[] nums) {\n        Arrays.sort(nums);\n        System.out.println(nums[0]);\n        return 0;\n    }\n}"
+    "code": "import java.util.Arrays;\n\nclass Solution {\n    public int findGCD(int[] nums) {\n        Arrays.sort(nums);\n        System.out.println(nums[0]);\n        return nums[0];\n    }\n}"
   }
 ]
