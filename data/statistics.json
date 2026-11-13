@@ -1,24 +1,24 @@
 {
-  "totalSolved": 24,
-  "easy": 10,
+  "totalSolved": 25,
+  "easy": 11,
   "medium": 12,
   "hard": 1,
   "byLanguage": {
-    "java": 22,
+    "java": 23,
     "unknown": 4,
     "cpp": 2
   },
   "byPlatform": {
-    "leetcode": 23,
+    "leetcode": 24,
     "geeksforgeeks": 1
   },
   "byTopic": {
     "Two Pointers": 13,
     "Linked List": 11,
-    "Array": 8,
+    "Array": 9,
     "Hash Table": 7,
+    "Math": 5,
     "Floyd's Cycle Finding Algorithm": 4,
-    "Math": 4,
     "Binary Search": 4,
     "Recursion": 4,
     "Sorting": 3,
@@ -42,7 +42,10 @@
     "String Matching": 1,
     "Z Algorithm": 1,
     "Knuth–Morris–Pratt Algorithm": 1,
-    "Boyer–Moore String-Search Algorithm": 1
+    "Boyer–Moore String-Search Algorithm": 1,
+    "Number Theory": 1,
+    "Euclidean Algorithm": 1,
+    "Greatest Common Divisor": 1
   },
   "perDay": {
     "2026-05-04": 1,
@@ -66,18 +69,19 @@
     "2026-11-07": 1,
     "2026-11-09": 1,
     "2026-11-10": 1,
-    "2026-11-12": 1
+    "2026-11-12": 1,
+    "2026-11-13": 1
   },
   "perMonth": {
     "2026-05": 1,
     "2026-08": 13,
     "2026-09": 1,
-    "2026-11": 9
+    "2026-11": 10
   },
   "perYear": {
-    "2026": 24
+    "2026": 25
   },
   "firstSolved": "2026-05-04",
-  "latestSolved": "2026-11-12",
-  "generatedAt": "2026-11-12T14:51:07.700Z"
+  "latestSolved": "2026-11-13",
+  "generatedAt": "2026-11-13T13:14:09.571Z"
 }
