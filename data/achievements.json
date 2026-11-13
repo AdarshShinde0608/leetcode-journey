@@ -7,7 +7,7 @@
       "description": "Solve your first problem",
       "type": "problems",
       "threshold": 1,
-      "unlockedAt": "2026-11-12T14:51:07.702Z"
+      "unlockedAt": "2026-11-13T13:14:09.573Z"
     },
     {
       "id": "problems_10",
@@ -16,18 +16,19 @@
       "description": "Solve 10 problems",
       "type": "problems",
       "threshold": 10,
-      "unlockedAt": "2026-11-12T14:51:07.702Z"
-    }
-  ],
-  "locked": [
+      "unlockedAt": "2026-11-13T13:14:09.573Z"
+    },
     {
       "id": "problems_25",
       "title": "25 Problems",
       "emoji": "🏆",
       "description": "Solve 25 problems",
       "type": "problems",
-      "threshold": 25
-    },
+      "threshold": 25,
+      "unlockedAt": "2026-11-13T13:14:09.573Z"
+    }
+  ],
+  "locked": [
     {
       "id": "problems_50",
       "title": "50 Problems",
@@ -101,5 +102,5 @@
       "threshold": 365
     }
   ],
-  "generatedAt": "2026-11-12T14:51:07.702Z"
+  "generatedAt": "2026-11-13T13:14:09.573Z"
 }
