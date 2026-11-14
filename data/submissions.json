@@ -1068,7 +1068,7 @@
     "code": "import java.util.*;\n\nclass Solution {\n    public int gcd(int a, int b) {\n    return (b == 0) ? a : gcd(b, a % b);\n    }\n\n    public int findGCD(int[] nums) {\n        Arrays.sort(nums);\n        int res = 0;\n        int n = nums.length;\n\n        res = gcd(nums[0], nums[n-1]);\n\n        return res;\n    }\n}"
   },
   {
-    "submission_id": "runcode_1794670831.2643564_wgHZpSPs3j",
+    "submission_id": "2196021198",
     "problem": {
       "id": 14,
       "title": "Longest Common Prefix",
@@ -1083,11 +1083,11 @@
     },
     "language": "java",
     "status": "Accepted",
-    "submitted_at": "2026-11-14T15:40:35Z",
+    "submitted_at": "2026-11-14T15:40:47Z",
     "runtime": "0 ms",
-    "memory": "41.4 MB",
-    "runtime_percentile": null,
-    "memory_percentile": null,
+    "memory": "43 MB",
+    "runtime_percentile": 100,
+    "memory_percentile": 54.7787,
     "code": "class Solution {\n    public String longestCommonPrefix(String[] strs) {\n        if (strs == null || strs.length == 0) {\n            return \"\";\n        }\n\n        String prefix = strs[0];\n\n        for (int i = 1; i < strs.length; i++) {\n            while (!strs[i].startsWith(prefix)) {\n                prefix = prefix.substring(0, prefix.length() - 1);\n\n                if (prefix.isEmpty()) {\n                    return \"\";\n                }\n            }\n        }\n        return prefix;\n    }\n}"
   }
 ]
