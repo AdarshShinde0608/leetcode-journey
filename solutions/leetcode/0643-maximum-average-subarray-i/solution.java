@@ -24,8 +24,7 @@ class Solution {
 			
 			low++; high++;
 		}
-
-        double res = result/k;
-		return res;
+        
+		return (double) result/k;
     }
 }
