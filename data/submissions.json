@@ -1089,5 +1089,27 @@
     "runtime_percentile": 100,
     "memory_percentile": 54.7787,
     "code": "class Solution {\n    public String longestCommonPrefix(String[] strs) {\n        if (strs == null || strs.length == 0) {\n            return \"\";\n        }\n\n        String prefix = strs[0];\n\n        for (int i = 1; i < strs.length; i++) {\n            while (!strs[i].startsWith(prefix)) {\n                prefix = prefix.substring(0, prefix.length() - 1);\n\n                if (prefix.isEmpty()) {\n                    return \"\";\n                }\n            }\n        }\n        return prefix;\n    }\n}"
+  },
+  {
+    "submission_id": "runcode_1794763296.6315093_d3sPRAHGiN",
+    "problem": {
+      "id": 643,
+      "title": "Maximum Average Subarray I",
+      "slug": "maximum-average-subarray-i",
+      "difficulty": "Easy",
+      "topics": [
+        "Array",
+        "Sliding Window"
+      ],
+      "url": "https://leetcode.com/problems/maximum-average-subarray-i/"
+    },
+    "language": "java",
+    "status": "Accepted",
+    "submitted_at": "2026-11-15T17:21:41Z",
+    "runtime": "0 ms",
+    "memory": "44.2 MB",
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": "class Solution {\n    public static int max(int a, int b) {\n\t\tif (a>b) {\n\t\t\treturn a;\n\t\t}\n\t\treturn b;\n\t}\n\n    public double findMaxAverage(int[] nums, int k) {\n\t\tint n = nums.length;\n\t\tint low = 0, high = k - 1;\n\t\tint sum = 0, result = sum;\n\t\t\n\t\tfor (int i = low; i <= high; i++) {\n\t\t\tsum += nums[i];\n\t\t}\n\t\t\n\t\tresult = sum;\n\t\tlow++; high++;\n\t\twhile (high<n) {\n\t\t\tsum -= nums[low - 1];\n\t\t\tsum += nums[high];\n\t\t\tresult = max(sum, result);\n\t\t\t\n\t\t\tlow++; high++;\n\t\t}\n\t\treturn result/k;\n    }\n}"
   }
 ]
