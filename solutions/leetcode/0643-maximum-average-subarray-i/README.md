@@ -4,7 +4,7 @@
 |-------|-------|
 | **Problem #** | 643 |
 | **Difficulty** | Easy |
-| **Language** | unknown |
+| **Language** | Java |
 | **Topics** | Array, Sliding Window |
 | **Date Solved** | 2026-11-15 |
 | **Platform** | LeetCode |
@@ -14,7 +14,7 @@
 
 | Language | Source Code | Date Solved | Runtime | Memory |
 |:---|:---|:---|:---|:---|
-| Java | [solution.java](solution.java) | 2026-11-15 | 3 ms | 69.5 MB |
+| Java | [solution.java](solution.java) | 2026-11-15 | 3 ms | 69.1 MB |
 | unknown | [solution.txt](solution.txt) | 2026-11-15 | — | — |
 
 ## Approach
@@ -25,3 +25,8 @@
 
 - **Time**: O(?)
 - **Space**: O(?)
+
+## Performance
+
+- **Runtime**: 3 ms
+- **Memory**: 69.1 MB
