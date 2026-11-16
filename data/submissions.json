@@ -1135,7 +1135,7 @@
     "code": "\n"
   },
   {
-    "submission_id": "runcode_1794854125.2882917_o51YafIDpz",
+    "submission_id": "2197536326",
     "problem": {
       "id": 1652,
       "title": "Defuse the Bomb",
@@ -1149,11 +1149,11 @@
     },
     "language": "java",
     "status": "Accepted",
-    "submitted_at": "2026-11-16T18:35:29Z",
-    "runtime": "0 ms",
-    "memory": "41.4 MB",
-    "runtime_percentile": null,
-    "memory_percentile": null,
+    "submitted_at": "2026-11-16T18:35:40Z",
+    "runtime": "2 ms",
+    "memory": "43.2 MB",
+    "runtime_percentile": 63.1032,
+    "memory_percentile": 92.82799999999999,
     "code": "class Solution {\n    public int[] decrypt(int[] code, int k) {\n        int n = code.length;\n        int[] result = new int[n];\n\n        if (k == 0) {\n            return result;\n        }\n\n        for (int i = 0; i < n; i++) {\n            int sum = 0;\n\n            if (k > 0) {\n                for (int j = 1; j <= k; j++) {\n                    sum += code[(i + j) % n];\n                }\n            } else {\n                for (int j = 1; j <= -k; j++) {\n                    sum += code[(i - j + n) % n];\n                }\n            }\n\n            result[i] = sum;\n        }\n\n        return result;\n    }\n}"
   }
 ]
