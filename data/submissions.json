@@ -1178,5 +1178,28 @@
     "runtime_percentile": null,
     "memory_percentile": null,
     "code": "import java.util.*;\n\nclass Solution {\n    public List<List<Integer>> subsetsWithDup(int[] nums) {\n        Arrays.sort(nums);\n        List<List<Integer>> result = new ArrayList<>();\n        backtrack(nums, 0, new ArrayList<>(), result);\n        return result;\n    }\n\n    private void backtrack(int[] nums, int start, List<Integer> current,\n                           List<List<Integer>> result) {\n        result.add(new ArrayList<>(current));\n\n        for (int i = start; i < nums.length; i++) {\n            // Skip duplicates at the same recursion level\n            if (i > start && nums[i] == nums[i - 1]) {\n                continue;\n            }\n\n            current.add(nums[i]);\n            backtrack(nums, i + 1, current, result);\n            current.remove(current.size() - 1);\n        }\n    }\n}\n"
+  },
+  {
+    "submission_id": "dom_1795197622259",
+    "problem": {
+      "id": 90,
+      "title": "Subsets II",
+      "slug": "subsets-ii",
+      "difficulty": "Medium",
+      "topics": [
+        "Array",
+        "Backtracking",
+        "Bit Manipulation"
+      ],
+      "url": "https://leetcode.com/problems/subsets-ii/"
+    },
+    "language": "unknown",
+    "status": "Accepted",
+    "submitted_at": "2026-11-20T18:00:22Z",
+    "runtime": null,
+    "memory": null,
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": "\n"
   }
 ]
