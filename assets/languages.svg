@@ -2,15 +2,15 @@
   <rect width="380" height="130" fill="#0d1117" rx="6"/>
   <text x="10" y="18" font-size="12" fill="#8b949e" font-family="monospace" font-weight="bold">Language Distribution</text>
   <text x="10" y="43" font-size="11" fill="#c9d1d9" font-family="monospace">java   </text>
-  <rect x="70" y="30" width="175" height="18" rx="3" fill="#58a6ff"/>
+  <rect x="70" y="30" width="170" height="18" rx="3" fill="#58a6ff"/>
   <rect x="70" y="30" width="220" height="18" rx="3" fill="none" stroke="#30363d"/>
-  <text x="251" y="43" font-size="11" fill="#8b949e" font-family="monospace">27 (79.4%)</text>
+  <text x="246" y="43" font-size="11" fill="#8b949e" font-family="monospace">27 (77.1%)</text>
   <text x="10" y="73" font-size="11" fill="#c9d1d9" font-family="monospace">unknown</text>
-  <rect x="70" y="60" width="32" height="18" rx="3" fill="#58a6ff"/>
+  <rect x="70" y="60" width="38" height="18" rx="3" fill="#58a6ff"/>
   <rect x="70" y="60" width="220" height="18" rx="3" fill="none" stroke="#30363d"/>
-  <text x="108" y="73" font-size="11" fill="#8b949e" font-family="monospace">5 (14.7%)</text>
+  <text x="114" y="73" font-size="11" fill="#8b949e" font-family="monospace">6 (17.1%)</text>
   <text x="10" y="103" font-size="11" fill="#c9d1d9" font-family="monospace">cpp    </text>
   <rect x="70" y="90" width="13" height="18" rx="3" fill="#58a6ff"/>
   <rect x="70" y="90" width="220" height="18" rx="3" fill="none" stroke="#30363d"/>
-  <text x="89" y="103" font-size="11" fill="#8b949e" font-family="monospace">2 (5.9%)</text>
+  <text x="89" y="103" font-size="11" fill="#8b949e" font-family="monospace">2 (5.7%)</text>
 </svg>
