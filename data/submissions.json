@@ -1155,5 +1155,28 @@
     "runtime_percentile": 63.1032,
     "memory_percentile": 92.82799999999999,
     "code": "class Solution {\n    public int[] decrypt(int[] code, int k) {\n        int n = code.length;\n        int[] result = new int[n];\n\n        if (k == 0) {\n            return result;\n        }\n\n        for (int i = 0; i < n; i++) {\n            int sum = 0;\n\n            if (k > 0) {\n                for (int j = 1; j <= k; j++) {\n                    sum += code[(i + j) % n];\n                }\n            } else {\n                for (int j = 1; j <= -k; j++) {\n                    sum += code[(i - j + n) % n];\n                }\n            }\n\n            result[i] = sum;\n        }\n\n        return result;\n    }\n}"
+  },
+  {
+    "submission_id": "runcode_1795197557.527317_sIthNKTZJ1",
+    "problem": {
+      "id": 90,
+      "title": "Subsets II",
+      "slug": "subsets-ii",
+      "difficulty": "Medium",
+      "topics": [
+        "Array",
+        "Backtracking",
+        "Bit Manipulation"
+      ],
+      "url": "https://leetcode.com/problems/subsets-ii/"
+    },
+    "language": "java",
+    "status": "Accepted",
+    "submitted_at": "2026-11-20T17:59:21Z",
+    "runtime": "1 ms",
+    "memory": "41.9 MB",
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": "import java.util.*;\n\nclass Solution {\n    public List<List<Integer>> subsetsWithDup(int[] nums) {\n        Arrays.sort(nums);\n        List<List<Integer>> result = new ArrayList<>();\n        backtrack(nums, 0, new ArrayList<>(), result);\n        return result;\n    }\n\n    private void backtrack(int[] nums, int start, List<Integer> current,\n                           List<List<Integer>> result) {\n        result.add(new ArrayList<>(current));\n\n        for (int i = start; i < nums.length; i++) {\n            // Skip duplicates at the same recursion level\n            if (i > start && nums[i] == nums[i - 1]) {\n                continue;\n            }\n\n            current.add(nums[i]);\n            backtrack(nums, i + 1, current, result);\n            current.remove(current.size() - 1);\n        }\n    }\n}\n"
   }
 ]
