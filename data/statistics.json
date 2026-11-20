@@ -5,7 +5,7 @@
   "hard": 1,
   "byLanguage": {
     "java": 27,
-    "unknown": 5,
+    "unknown": 6,
     "cpp": 2
   },
   "byPlatform": {
@@ -89,5 +89,5 @@
   },
   "firstSolved": "2026-05-04",
   "latestSolved": "2026-11-20",
-  "generatedAt": "2026-11-20T17:59:33.891Z"
+  "generatedAt": "2026-11-20T18:00:27.063Z"
 }
