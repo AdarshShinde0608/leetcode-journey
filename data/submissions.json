@@ -1201,5 +1201,28 @@
     "runtime_percentile": null,
     "memory_percentile": null,
     "code": "\n"
+  },
+  {
+    "submission_id": "runcode_1795266660.1362052_V5oNWAwdjt",
+    "problem": {
+      "id": 217,
+      "title": "Contains Duplicate",
+      "slug": "contains-duplicate",
+      "difficulty": "Easy",
+      "topics": [
+        "Array",
+        "Hash Table",
+        "Sorting"
+      ],
+      "url": "https://leetcode.com/problems/contains-duplicate/"
+    },
+    "language": "java",
+    "status": "Accepted",
+    "submitted_at": "2026-11-21T13:11:03Z",
+    "runtime": "0 ms",
+    "memory": "41.2 MB",
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": "import java.util.HashMap;\nimport java.util.Map;\n\nclass Solution {\n    public boolean containsDuplicate(int[] nums) {\n        Map<Integer, Integer> seen = new HashMap<>();\n        \n        for (int num : nums) {\n            if (seen.containsKey(num)) {\n                return true;   // duplicate found\n            }\n            seen.put(num, 1);  // mark as seen\n        }\n        \n        return false;          // all elements are distinct\n    }\n}"
   }
 ]
