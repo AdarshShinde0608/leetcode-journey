@@ -1226,7 +1226,7 @@
     "code": "import java.util.HashMap;\nimport java.util.Map;\n\nclass Solution {\n    public boolean containsDuplicate(int[] nums) {\n        Map<Integer, Integer> seen = new HashMap<>();\n        \n        for (int num : nums) {\n            if (seen.containsKey(num)) {\n                return true;   // duplicate found\n            }\n            seen.put(num, 1);  // mark as seen\n        }\n        \n        return false;          // all elements are distinct\n    }\n}"
   },
   {
-    "submission_id": "runcode_1795367749.7933967_QYobhlmVdN",
+    "submission_id": "2201420330",
     "problem": {
       "id": 2124,
       "title": "Check if All A's Appears Before All B's",
@@ -1239,11 +1239,11 @@
     },
     "language": "java",
     "status": "Accepted",
-    "submitted_at": "2026-11-22T17:15:53Z",
-    "runtime": "0 ms",
-    "memory": "42 MB",
-    "runtime_percentile": null,
-    "memory_percentile": null,
+    "submitted_at": "2026-11-22T17:19:10Z",
+    "runtime": "1 ms",
+    "memory": "42.1 MB",
+    "runtime_percentile": 54.5665,
+    "memory_percentile": 90.9827,
     "code": "class Solution {\n    public boolean checkString(String s) {\n        boolean seen = false;\n\n        for (char c : s.toCharArray()) {\n            if (c == 'b') {\n                seen = true;\n            } else if (seen) {\n                return false;\n            }\n        }\n        return true;\n    }\n}\n\n"
   }
 ]
