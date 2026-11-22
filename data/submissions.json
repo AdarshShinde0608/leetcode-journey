@@ -1224,5 +1224,26 @@
     "runtime_percentile": 78.4981,
     "memory_percentile": 5.3640999999999615,
     "code": "import java.util.HashMap;\nimport java.util.Map;\n\nclass Solution {\n    public boolean containsDuplicate(int[] nums) {\n        Map<Integer, Integer> seen = new HashMap<>();\n        \n        for (int num : nums) {\n            if (seen.containsKey(num)) {\n                return true;   // duplicate found\n            }\n            seen.put(num, 1);  // mark as seen\n        }\n        \n        return false;          // all elements are distinct\n    }\n}"
+  },
+  {
+    "submission_id": "2201417935",
+    "problem": {
+      "id": 2124,
+      "title": "Check if All A's Appears Before All B's",
+      "slug": "check-if-all-as-appears-before-all-bs",
+      "difficulty": "Easy",
+      "topics": [
+        "String"
+      ],
+      "url": "https://leetcode.com/problems/check-if-all-as-appears-before-all-bs/"
+    },
+    "language": "java",
+    "status": "Accepted",
+    "submitted_at": "2026-11-22T17:15:24Z",
+    "runtime": "0 ms",
+    "memory": "42.3 MB",
+    "runtime_percentile": 100,
+    "memory_percentile": 68.55489999999999,
+    "code": "class Solution {\n    public boolean checkString(String s) {\n        boolean seen = false;\n\n        for (char c : s.toCharArray()) {\n            if (c == 'b') {\n                seen = true;\n            } else if (seen) {\n                return false;\n            }\n        }\n        return true;\n    }\n}\n\n"
   }
 ]
