@@ -21,5 +21,5 @@
 
 ## Performance
 
-- **Runtime**: 0 ms
-- **Memory**: 41.1 MB
+- **Runtime**: 16 ms
+- **Memory**: 46.3 MB
