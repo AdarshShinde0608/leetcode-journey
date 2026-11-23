@@ -1245,5 +1245,28 @@
     "runtime_percentile": 54.5665,
     "memory_percentile": 90.9827,
     "code": "class Solution {\n    public boolean checkString(String s) {\n        boolean seen = false;\n\n        for (char c : s.toCharArray()) {\n            if (c == 'b') {\n                seen = true;\n            } else if (seen) {\n                return false;\n            }\n        }\n        return true;\n    }\n}\n\n"
+  },
+  {
+    "submission_id": "runcode_1795454247.8255033_bMlu3AUjPd",
+    "problem": {
+      "id": 242,
+      "title": "Valid Anagram",
+      "slug": "valid-anagram",
+      "difficulty": "Easy",
+      "topics": [
+        "Hash Table",
+        "String",
+        "Sorting"
+      ],
+      "url": "https://leetcode.com/problems/valid-anagram/"
+    },
+    "language": "java",
+    "status": "Accepted",
+    "submitted_at": "2026-11-23T17:17:32Z",
+    "runtime": "0 ms",
+    "memory": "41.4 MB",
+    "runtime_percentile": null,
+    "memory_percentile": null,
+    "code": "class Solution {\n    public boolean isAnagram(String s, String t) {\n        // Lengths must match\n        if (s.length() != t.length()) return false;\n        \n        int[] count = new int[26];\n        \n        // Increment for s, decrement for t\n        for (int i = 0; i < s.length(); i++) {\n            count[s.charAt(i) - 'a']++;\n            count[t.charAt(i) - 'a']--;\n        }\n        \n        // All counts must be zero\n        for (int c : count) {\n            if (c != 0) return false;\n        }\n        \n        return true;\n    }\n}\n"
   }
 ]
