@@ -1,19 +1,24 @@
+import java.util.HashMap;
+import java.util.Map;
+
 class Solution {
     public boolean isAnagram(String s, String t) {
         // Lengths must match
         if (s.length() != t.length()) return false;
         
-        int[] count = new int[26];
+        Map<Character, Integer> map = new HashMap<>();
         
-        // Increment for s, decrement for t
-        for (int i = 0; i < s.length(); i++) {
-            count[s.charAt(i) - 'a']++;
-            count[t.charAt(i) - 'a']--;
+        // Count frequencies in s
+        for (char c : s.toCharArray()) {
+            map.put(c, map.getOrDefault(c, 0) + 1);
         }
         
-        // All counts must be zero
-        for (int c : count) {
-            if (c != 0) return false;
+        // Decrement frequencies using t
+        for (char c : t.toCharArray()) {
+            if (!map.containsKey(c)) return false;
+            int newCount = map.get(c) - 1;
+            if (newCount < 0) return false;
+            map.put(c, newCount);
         }
         
         return true;
