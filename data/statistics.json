@@ -1,29 +1,29 @@
 {
-  "totalSolved": 31,
-  "easy": 16,
+  "totalSolved": 32,
+  "easy": 17,
   "medium": 13,
   "hard": 1,
   "byLanguage": {
-    "java": 29,
+    "java": 30,
     "unknown": 6,
     "cpp": 2
   },
   "byPlatform": {
-    "leetcode": 30,
+    "leetcode": 31,
     "geeksforgeeks": 1
   },
   "byTopic": {
     "Array": 14,
     "Two Pointers": 13,
     "Linked List": 11,
-    "Hash Table": 8,
+    "Hash Table": 9,
+    "Sorting": 5,
     "Math": 5,
     "Sliding Window": 5,
-    "Sorting": 4,
+    "String": 5,
     "Floyd's Cycle Finding Algorithm": 4,
     "Binary Search": 4,
     "Recursion": 4,
-    "String": 4,
     "Prefix Sum": 3,
     "Bit Manipulation": 2,
     "Pigeonhole Principle": 2,
@@ -78,18 +78,19 @@
     "2026-11-16": 1,
     "2026-11-20": 1,
     "2026-11-21": 1,
-    "2026-11-22": 1
+    "2026-11-22": 1,
+    "2026-11-23": 1
   },
   "perMonth": {
     "2026-05": 1,
     "2026-08": 13,
     "2026-09": 1,
-    "2026-11": 16
+    "2026-11": 17
   },
   "perYear": {
-    "2026": 31
+    "2026": 32
   },
   "firstSolved": "2026-05-04",
-  "latestSolved": "2026-11-22",
-  "generatedAt": "2026-11-22T17:19:13.927Z"
+  "latestSolved": "2026-11-23",
+  "generatedAt": "2026-11-23T17:17:37.902Z"
 }
